@@ -5,6 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Safeguarding - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tabbed interface styling */
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 20px;
+    }
+    .tabs button {
+      background-color: #f8f4e3;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #4a4a4a;
+      border-radius: 5px 5px 0 0;
+      margin-right: 5px;
+    }
+    .tabs button.active {
+      background-color: #d9e4dd;
+      color: #2c3e50;
+      border-bottom: 2px solid transparent;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,14 +51,35 @@
   <!-- Safeguarding Content -->
   <div class="content">
     <h2>Safeguarding</h2>
-    <p>We follow all statutory safeguarding policies, guided by Keeping Children Safe in Education and Working Together to Safeguard Children. Our Designated Safeguarding Lead ensures a safe and nurturing environment for all.</p>
-    
-    <!-- Policies Section -->
-    <h3>Safeguarding Policies</h3>
+    <p>At Meadow Pathways Well-being and Education, the safety, welfare, and well-being of every child and young person is our highest priority.</p>
+    <p>We are committed to creating a nurturing and secure environment where children feel safe, respected, and listened to. We recognise our moral and statutory responsibility to safeguard and promote the welfare of all children, and we take this duty seriously.</p>
+    <p>Our provision is underpinned by robust safeguarding policies and procedures, in line with national guidance and local protocols. All staff are fully trained in safeguarding, child protection, and safer working practices, and we work in close partnership with families, local authorities, and other professionals to ensure the best possible outcomes for the young people in our care.</p>
+    <p>We believe that safeguarding is everyone’s responsibility and forms the foundation of our therapeutic, relational approach.</p>
+    <p>If you have any safeguarding concerns, please contact our Designated Safeguarding Lead:</p>
     <ul>
-      <li><a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">Download Safeguarding Policy</a></li>
-      <li><a href="Additional_Safeguarding_Policy.docx" target="_blank">Download Additional Safeguarding Policy</a></li>
+      <li><strong>Michelle Pascoe</strong></li>
+      <li>Email: meadowpathwayscornwall@outlook.com</li>
+      <li>Phone: 07932 243358</li>
     </ul>
+
+    <!-- Tabs for Policies -->
+    <div class="tabs">
+      <button class="tab-button active" onclick="openTab(event, 'policy1')">Safeguarding Policy</button>
+      <button class="tab-button" onclick="openTab(event, 'policy2')">Additional Policy</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="policy1" class="tab-content active">
+      <h3>Safeguarding Policy</h3>
+      <p>Our main safeguarding policy outlines our commitment to protecting the welfare of all children in our care.</p>
+      <a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">Download Safeguarding Policy</a>
+    </div>
+
+    <div id="policy2" class="tab-content">
+      <h3>Additional Safeguarding Policy</h3>
+      <p>This additional policy provides further details about our safeguarding practices and procedures.</p>
+      <a href="Additional_Safeguarding_Policy.docx" target="_blank">Download Additional Safeguarding Policy</a>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -37,6 +87,20 @@
     <p>&copy; 2025 Meadow Pathways Cornwall. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Tab functionality
+    function openTab(event, tabId) {
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      // Remove active class from all tabs and buttons
+      tabButtons.forEach(button => button.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Add active class to the clicked button and corresponding tab
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
