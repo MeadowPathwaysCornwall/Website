@@ -47,21 +47,54 @@ body {
   color: #2c3e50; /* Natural color: dark blue-gray */
 }
 
-/* Banner */
-.banner {
+/* Tagline */
+.tagline {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.tagline h1 {
+  margin: 0;
+}
+
+.tagline p {
+  font-style: italic;
+  color: #555;
+}
+
+/* Mission and Vision Sections */
+.mission, .vision {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.mission h2, .vision h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.mission p, .vision p {
+  line-height: 1.6;
+}
+
+.vision ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vision li {
+  margin-bottom: 10px;
+}
+
+/* Image Section */
+.image-section {
   text-align: center;
   padding: 20px;
 }
 
-.banner img {
+.image-section img {
   max-width: 100%;
   height: auto;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #f0f0f0;
-  color: #333;
 }
