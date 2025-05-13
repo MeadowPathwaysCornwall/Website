@@ -14,19 +14,19 @@ body {
 }
 
 /* Banner image */
-.banner img {
+.banner.png img {
   width: 100%;
   height: auto;
 }
 
 /* Logo styling */
-.logo {
+.Logo.png {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
 
-.logo img {
+.logo.png img {
   height: 100px;
   width: auto;
 }
