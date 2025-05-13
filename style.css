@@ -4,42 +4,64 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Banner and Logo */
-.banner {
-  position: relative;
-  background-color: #f0f0f0;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
+/* Logo */
 .logo {
-  width: 100px; /* Adjust the size of the logo */
-  height: auto;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-/* Navigation Tabs */
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  background-color: #f8f4e3; /* Natural color: light beige */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
 .navigation {
   list-style-type: none;
   display: flex;
+  justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 .navigation li {
-  margin-right: 15px;
+  margin: 0 15px;
 }
 
 .navigation a {
   text-decoration: none;
-  color: #333;
+  color: #4a4a4a; /* Natural color: neutral gray */
+  font-size: 16px; /* Tab size */
   font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .navigation a:hover {
-  text-decoration: underline;
+  background-color: #d9e4dd; /* Natural color: light green */
+  color: #2c3e50; /* Natural color: dark blue-gray */
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 20px;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
 }
