@@ -2,13 +2,13 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f1fdf3;
-  background-image: none; /* Default: No background image for other pages */
+  background-color: #f1fdf3; /* Default background */
+  background-image: none; /* No background image for most pages */
 }
 
 /* Contact Page Background */
 body.contact-page {
-  background-image: url('contact1.png'); /* Set the background image for Contact page only */
+  background-image: url('contact1.png'); /* Background image for Contact page only */
   background-size: cover; /* Ensure the image covers the entire page */
   background-repeat: no-repeat; /* Avoid repeating the image */
   background-attachment: fixed; /* Keep the image fixed while scrolling */
@@ -41,6 +41,14 @@ body.contact-page {
   color: #2c3e50;
 }
 
+/* Home Banner */
+.home-banner img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
 /* Contact Banner */
 .contact-banner img {
   width: 100%;
@@ -58,5 +66,22 @@ body.contact-page {
   margin: 20px auto;
   width: 80%;
   max-width: 700px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
