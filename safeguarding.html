@@ -1,90 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Safeguarding - Meadow Pathways Cornwall</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .tabs {
-      display: flex;
-      border-bottom: 2px solid #ddd;
-      margin-bottom: 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Policies - Meadow Pathways Cornwall</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function openTab(event, tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      
+      tabs.forEach(tab => tab.style.display = 'none');
+      buttons.forEach(button => button.classList.remove('active'));
+      
+      document.getElementById(tabId).style.display = 'block';
+      event.currentTarget.classList.add('active');
     }
-    .tabs button {
-      background-color: #f8f4e3;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-weight: bold;
-      color: #4a4a4a;
-      border-radius: 5px 5px 0 0;
-      margin-right: 5px;
-    }
-    .tabs button.active {
-      background-color: #d9e4dd;
-      color: #2c3e50;
-      border-bottom: 2px solid transparent;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-  </style>
+  </script>
 </head>
 <body>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="Logo.png" alt="Meadow Pathways Logo">
+  </div>
 
   <!-- Navigation -->
   <nav class="navigation-bar">
     <ul class="navigation">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="safeguarding.html">Safeguarding</a></li>
-      <li><a href="complaints.html">Complaints</a></li>
+      <li><a href="safeguarding.html">Policies</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 
-  <!-- Safeguarding Content -->
-  <div class="content">
-    <h2>Safeguarding</h2>
-    <p>At Meadow Pathways Well-being and Education, the safety, welfare, and well-being of every child and young person is our highest priority.</p>
-
-    <!-- Tabs for Policies -->
-    <div class="tabs">
-      <button class="tab-button active" onclick="openTab(event, 'policy1')">Safeguarding Policy</button>
-      <button class="tab-button" onclick="openTab(event, 'policy2')">Additional Policy</button>
-    </div>
-
-    <!-- Tab Content -->
-    <div id="policy1" class="tab-content active">
-      <h3>Safeguarding Policy</h3>
-      <a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">Download Safeguarding Policy</a>
-    </div>
-
-    <div id="policy2" class="tab-content">
-      <h3>Additional Safeguarding Policy</h3>
-      <a href="Additional_Safeguarding_Policy.docx" target="_blank">Download Additional Safeguarding Policy</a>
-    </div>
+  <!-- Policy Tabs -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'safeguarding-policy')">Safeguarding Policy</button>
+    <button class="tab-button" onclick="openTab(event, 'complaints-policy')">Complaints Policy</button>
   </div>
 
+  <!-- Tab Content -->
+  <div id="safeguarding-policy" class="tab-content" style="display: block;">
+    <h2>Safeguarding Policy</h2>
+    <p>Download our safeguarding policy:</p>
+    <a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">Safeguarding Policy</a>
+  </div>
+
+  <div id="complaints-policy" class="tab-content" style="display: none;">
+    <h2>Complaints Policy</h2>
+    <p>Download our complaints policy:</p>
+    <a href="Complaints_Policy.docx" target="_blank">Complaints Policy</a>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Meadow Pathways Cornwall. All rights reserved.</p>
   </footer>
 
-  <script>
-    function openTab(event, tabId) {
-      const tabButtons = document.querySelectorAll('.tab-button');
-      const tabContents = document.querySelectorAll('.tab-content');
-
-      tabButtons.forEach(button => button.classList.remove('active'));
-      tabContents.forEach(content => content.classList.remove('active'));
-
-      event.currentTarget.classList.add('active');
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
 </body>
 </html>
