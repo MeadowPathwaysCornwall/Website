@@ -12,7 +12,7 @@ body {
 }
 
 .home-button img {
-  width: 150px; /* Ensure logo is prominent */
+  width: 200px; /* Ensure logo is prominent */
   height: auto;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .banner-text {
-  position: absolute;
+  position: below;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
