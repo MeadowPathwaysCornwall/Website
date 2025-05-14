@@ -12,8 +12,22 @@ body {
 }
 
 .home-button img {
-  width: 200px; /* Ensure logo is prominent */
+  width: 150px; /* Increased size */
   height: auto;
+  cursor: pointer;
+  animation: wiggle 2s infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
 }
 
 /* Navigation Bar */
@@ -49,7 +63,7 @@ body {
 .banner {
   position: relative;
   width: 100%;
-  height: auto;
+  max-height: 400px;
   overflow: hidden;
 }
 
@@ -60,25 +74,61 @@ body {
 }
 
 .banner-text {
-  position: below;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  padding: 10px; /* Add padding to ensure text is not clipped */
-  box-sizing: border-box;
 }
 
 .banner-text h1 {
-  font-size: 2.8rem; /* Adjust size for better visibility */
-  margin: 0;
+  font-size: 2.5rem;
 }
 
 .banner-text p {
-  font-size: 1.4rem;
-  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+/* Content Section */
+.content-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.content-section p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.content-section ul {
+  list-style-type: disc;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 600px;
+}
+
+.content-section ul li {
+  margin-bottom: 10px;
+}
+
+.section-divider {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
