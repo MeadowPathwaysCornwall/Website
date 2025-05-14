@@ -61,76 +61,75 @@ body {
 
 /* Banner */
 .banner {
+  position: relative;
   width: 100%;
-  max-height: 300px; /* Ensures the banner is not too tall */
+  max-height: 400px;
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Ensures full image visibility */
+  object-fit: cover;
 }
 
-/* Banner Text */
 .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background-color: #d9e4dd; /* Light green background for banner text */
-  color: #2c3e50; /* Dark text for contrast */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .banner-text h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .banner-text p {
   font-size: 1.2rem;
 }
 
-/* Content */
-.content {
+/* Content Section */
+.content-section {
   padding: 20px;
   text-align: center;
 }
 
-.enrichment-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+.content-section h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
 }
 
-.enrichment-section img {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-  border-radius: 5px;
+.content-section p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-/* Contact Page */
-.contact-page {
-  text-align: center;
-  padding: 40px;
-  background: url('contact.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
+.content-section ul {
+  list-style-type: disc;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 600px;
 }
 
-.email-button {
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 20px;
+.content-section ul li {
+  margin-bottom: 10px;
 }
 
-.email-button:hover {
-  background-color: #388e3c;
+.section-divider {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 /* Footer */
