@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #f1fdf3;
 }
 
 /* Logo */
@@ -43,10 +44,28 @@ body {
   position: absolute;
   top: 20%;
   text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Section */
 .section {
   padding: 20px;
   text-align: center;
+}
+
+/* Safeguarding Image */
+.section-divider {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Background */
+.contact-background img {
+  width: 100%;
+  height: auto;
 }
