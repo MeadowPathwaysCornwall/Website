@@ -5,14 +5,14 @@ body {
   background-color: #f1fdf3; /* Soft green for a nature-inspired theme */
 }
 
-/* Home Button (Logo) */
+/* Logo (Home Button) */
 .home-button {
   text-align: center;
   margin: 10px 0;
 }
 
 .home-button img {
-  width: 100px;
+  width: 120px; /* Increased size */
   height: auto;
   cursor: pointer;
   animation: wiggle 2s infinite;
@@ -28,6 +28,35 @@ body {
   75% {
     transform: rotate(5deg);
   }
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  background-color: #d9e4dd;
+  padding: 10px 0;
+}
+
+.navigation-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-bar li {
+  margin: 0 15px;
+}
+
+.navigation-bar a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navigation-bar a:hover {
+  color: #4caf50;
 }
 
 /* Banner */
@@ -77,29 +106,6 @@ body {
   height: 100px;
   margin-right: 10px;
   border-radius: 5px;
-}
-
-/* Navigation Buttons */
-.navigation-buttons {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.nav-button {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #4caf50;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.nav-button:hover {
-  background-color: #388e3c;
 }
 
 /* Contact Page */
