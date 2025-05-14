@@ -17,7 +17,7 @@ body {
 
 /* Navigation Bar */
 .navigation-bar {
-  background-color: #f8f4e3; /* Natural color: light green */
+  background-color: #f8f4e3; /* Natural color: light beige */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
@@ -35,66 +35,53 @@ body {
 
 .navigation a {
   text-decoration: none;
-  color: #4a4a4a; /* Natural color: neutral gray */
-  font-size: 16px; /* Tab size */
+  color: #4a4a4a; /* Neutral gray */
+  font-size: 16px;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px;
 }
 
 .navigation a:hover {
-  background-color: #d9e4dd; /* Natural color: light green */
-  color: #2c3e50; /* Natural color: dark blue-gray */
+  background-color: #d9e4dd; /* Light green */
+  color: #2c3e50; /* Dark blue-gray */
 }
 
-/* Tagline */
-.tagline {
-  text-align: center;
-  background-color: #f0f0f0;
+/* Banner */
+.banner {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+}
+
+/* Welcome Content */
+.content {
   padding: 20px;
-}
-
-.tagline h1 {
-  margin: 0;
-}
-
-.tagline p {
-  font-style: italic;
-  color: #555;
-}
-
-/* Mission and Vision Sections */
-.mission, .vision {
-  padding: 20px;
-  background-color: #ffffff;
-  color: #333;
-}
-
-.mission h2, .vision h2 {
   text-align: center;
+}
+
+.content h2 {
   color: #2c3e50;
 }
 
-.mission p, .vision p {
+.content p {
   line-height: 1.6;
+  color: #555;
 }
 
-.vision ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.vision li {
-  margin-bottom: 10px;
-}
-
-/* Image Section */
-.image-section {
+/* Footer */
+footer {
   text-align: center;
-  padding: 20px;
-}
-
-.image-section img {
-  max-width: 100%;
-  height: auto;
+  padding: 10px;
+  background-color: #f8f4e3;
+  color: #4a4a4a;
 }
