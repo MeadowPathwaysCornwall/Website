@@ -1,120 +1,48 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f1fdf3;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meadow Pathways Cornwall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Logo -->
+  <div class="home-button">
+    <a href="index.html">
+      <img src="Logo.png" alt="Meadow Pathways Cornwall Logo">
+    </a>
+  </div>
 
-/* Logo (Home Button) */
-.home-button {
-  text-align: center;
-  margin: 10px 0;
-}
+  <!-- Navigation -->
+  <nav class="navigation-bar">
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="safeguarding.html">Safeguarding</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-.home-button img {
-  width: 150px;
-  height: auto;
-}
+  <!-- Banner -->
+  <div class="banner">
+    <img src="banner.png" alt="Welcome Banner">
+    <div class="banner-text">
+      <h1>Welcome to Meadow Pathways</h1>
+      <p>Guiding individual journeys with care and purpose.</p>
+    </div>
+  </div>
 
-/* Navigation Bar */
-.navigation-bar {
-  background-color: #d9e4dd;
-  padding: 10px 0;
-}
+  <!-- What We Offer Section -->
+  <div class="section">
+    <h2>What We Offer</h2>
+    <p>Meadow Pathways Well-being and Education provides personalised, therapeutic education for children and young people in Key Stages 2 to 4. Our approach is grounded in deep understanding of neurodiversity and emotional development, with a focus on building confidence, connection, and lifelong learning.</p>
+    <p>We work with children and young people who may have diagnoses such as Autism, ADHD, PDA, Dyslexia, OCD, and SEMH, or who simply find traditional settings challenging. Sessions are led by experienced education and well-being professionals, offered both in-person and online, and tailored to the individual’s strengths, interests, and goals.</p>
+    <p>Our aim is to offer a flexible, responsive alternative to conventional education — one that enables each learner to feel safe, seen, and successful.</p>
+  </div>
 
-.navigation-bar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-bar li {
-  margin: 0 15px;
-}
-
-.navigation-bar a {
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.navigation-bar a:hover {
-  color: #4caf50;
-}
-
-/* Banner */
-.banner {
-  position: relative;
-  width: 100%;
-  max-height: 400px;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Banner Text Below */
-.banner-text-below {
-  text-align: center;
-  color: #2c3e50;
-  padding: 20px;
-}
-
-/* Content Section */
-.content-section {
-  padding: 20px;
-  text-align: center;
-}
-
-.section-divider {
-  width: 100px;
-  height: auto;
-  margin: 10px auto;
-  display: block;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Tabs */
-.tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.tab-button {
-  background-color: #d9e4dd;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.tab-button.active {
-  background-color: #4caf50;
-  color: white;
-}
-
-.tab-content {
-  text-align: center;
-  padding: 20px;
-  display: none;
-}
-
-.tab-content:first-child {
-  display: block;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #d9e4dd;
-  color: #4a4a4a;
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Meadow Pathways Cornwall. All rights reserved.</p>
+  </footer>
+</body>
+</html>
