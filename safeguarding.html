@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Policies - Meadow Pathways Cornwall</title>
+  <title>Safeguarding Policies - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Home Button (Logo) -->
-  <div class="home-button">
-    <a href="index.html">
-      <img src="Logo.png" alt="Home Button">
-    </a>
-  </div>
-
-  <!-- Policies Content -->
-  <div class="content">
-    <h2>Safeguarding Policy</h2>
-    <p>Download our safeguarding policy:</p>
-    <a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">Safeguarding Policy</a>
-
-    <h2>Complaints Policy</h2>
-    <p>Download our complaints policy:</p>
-    <a href="Complaints_Policy.docx" target="_blank">Complaints Policy</a>
-  </div>
-
-  <!-- Navigation Buttons -->
-  <div class="navigation-buttons">
+  <!-- Navigation -->
+  <div class="navigation-bar">
     <a href="index.html" class="nav-button">Home</a>
     <a href="about.html" class="nav-button">About Us</a>
     <a href="contact.html" class="nav-button">Contact Us</a>
+  </div>
+
+  <!-- Tabs for Policies -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab('safeguarding')">Safeguarding Policy</button>
+    <button class="tab-button" onclick="openTab('complaints')">Complaints Policy</button>
+  </div>
+
+  <!-- Safeguarding Policy Content -->
+  <div id="safeguarding" class="tab-content">
+    <h2>Safeguarding Policy</h2>
+    <p>Download our safeguarding policy below:</p>
+    <a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">Safeguarding Policy</a>
+  </div>
+
+  <!-- Complaints Policy Content -->
+  <div id="complaints" class="tab-content" style="display: none;">
+    <h2>Complaints Policy</h2>
+    <p>Download our complaints policy below:</p>
+    <a href="Complaints_Policy.docx" target="_blank">Complaints Policy</a>
   </div>
 
   <!-- Footer -->
@@ -38,5 +40,22 @@
     <p>&copy; 2025 Meadow Pathways Cornwall. All rights reserved.</p>
   </footer>
 
+  <script>
+    function openTab(tabName) {
+      const tabs = document.getElementsByClassName('tab-content');
+      const buttons = document.getElementsByClassName('tab-button');
+
+      for (let tab of tabs) {
+        tab.style.display = 'none';
+      }
+
+      for (let button of buttons) {
+        button.classList.remove('active');
+      }
+
+      document.getElementById(tabName).style.display = 'block';
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
