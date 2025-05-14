@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f1fdf3;
+  background-image: none; /* Default: No background image for other pages */
 }
 
 /* Contact Page Background */
@@ -58,76 +59,4 @@ body.contact-page {
   width: 80%;
   max-width: 700px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-section h2 {
-  font-size: 28px;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-.contact-section p {
-  font-size: 16px;
-  color: #4a4a4a;
-  margin: 5px 0;
-}
-
-.contact-section a {
-  color: #4caf50;
-  text-decoration: none;
-}
-
-.contact-section a:hover {
-  text-decoration: underline;
-}
-
-/* Contact Form */
-.contact-form {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 700px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h3 {
-  font-size: 24px;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.contact-form label {
-  display: block;
-  font-size: 14px;
-  color: #4a4a4a;
-  margin-bottom: 5px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.contact-form button {
-  background-color: #4caf50;
-  color: white;
-  font-size: 16px;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-}
-
-.contact-form button:hover {
-  background-color: #45a049;
 }
