@@ -33,14 +33,14 @@ body {
 /* Banner */
 .banner {
   width: 100%;
-  height: auto;
+  max-height: 300px; /* Ensures the banner is not too tall */
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
-  height: auto; /* Ensures full image visibility */
-  object-fit: cover;
+  height: auto;
+  object-fit: cover; /* Ensures full image visibility */
 }
 
 /* Banner Text */
@@ -56,7 +56,6 @@ body {
 }
 
 .banner-text p {
-  margin-top: 10px;
   font-size: 1.2rem;
 }
 
@@ -80,13 +79,27 @@ body {
   border-radius: 5px;
 }
 
-.section-divider {
-  width: 100%;
-  max-width: 300px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Navigation Buttons */
+.navigation-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.nav-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4caf50;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #388e3c;
 }
 
 /* Contact Page */
@@ -108,7 +121,6 @@ body {
   border-radius: 5px;
   display: inline-block;
   margin-top: 20px;
-  transition: background-color 0.3s ease-in-out;
 }
 
 .email-button:hover {
