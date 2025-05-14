@@ -6,7 +6,6 @@
   <title>Safeguarding - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Tabbed interface styling */
     .tabs {
       display: flex;
       border-bottom: 2px solid #ddd;
@@ -52,15 +51,6 @@
   <div class="content">
     <h2>Safeguarding</h2>
     <p>At Meadow Pathways Well-being and Education, the safety, welfare, and well-being of every child and young person is our highest priority.</p>
-    <p>We are committed to creating a nurturing and secure environment where children feel safe, respected, and listened to. We recognise our moral and statutory responsibility to safeguard and promote the welfare of all children, and we take this duty seriously.</p>
-    <p>Our provision is underpinned by robust safeguarding policies and procedures, in line with national guidance and local protocols. All staff are fully trained in safeguarding, child protection, and safer working practices, and we work in close partnership with families, local authorities, and other professionals to ensure the best possible outcomes for the young people in our care.</p>
-    <p>We believe that safeguarding is everyone’s responsibility and forms the foundation of our therapeutic, relational approach.</p>
-    <p>If you have any safeguarding concerns, please contact our Designated Safeguarding Lead:</p>
-    <ul>
-      <li><strong>Michelle Pascoe</strong></li>
-      <li>Email: meadowpathwayscornwall@outlook.com</li>
-      <li>Phone: 07932 243358</li>
-    </ul>
 
     <!-- Tabs for Policies -->
     <div class="tabs">
@@ -71,33 +61,27 @@
     <!-- Tab Content -->
     <div id="policy1" class="tab-content active">
       <h3>Safeguarding Policy</h3>
-      <p>Our main safeguarding policy outlines our commitment to protecting the welfare of all children in our care.</p>
       <a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">Download Safeguarding Policy</a>
     </div>
 
     <div id="policy2" class="tab-content">
       <h3>Additional Safeguarding Policy</h3>
-      <p>This additional policy provides further details about our safeguarding practices and procedures.</p>
       <a href="Additional_Safeguarding_Policy.docx" target="_blank">Download Additional Safeguarding Policy</a>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Meadow Pathways Cornwall. All rights reserved.</p>
   </footer>
 
   <script>
-    // Tab functionality
     function openTab(event, tabId) {
       const tabButtons = document.querySelectorAll('.tab-button');
       const tabContents = document.querySelectorAll('.tab-content');
 
-      // Remove active class from all tabs and buttons
       tabButtons.forEach(button => button.classList.remove('active'));
       tabContents.forEach(content => content.classList.remove('active'));
 
-      // Add active class to the clicked button and corresponding tab
       event.currentTarget.classList.add('active');
       document.getElementById(tabId).classList.add('active');
     }
