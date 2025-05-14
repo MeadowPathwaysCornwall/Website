@@ -3,7 +3,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f1fdf3;
-  background-image: url('contact1.png'); /* Set the background image */
+}
+
+/* Contact Page Background */
+body.contact-page {
+  background-image: url('contact1.png'); /* Set the background image for Contact page only */
   background-size: cover; /* Ensure the image covers the entire page */
   background-repeat: no-repeat; /* Avoid repeating the image */
   background-attachment: fixed; /* Keep the image fixed while scrolling */
