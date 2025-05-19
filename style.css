@@ -37,12 +37,12 @@ p {
   100% { transform: rotate(0deg) skewX(0deg); }
 }
 
-/* SG.jpg Banner Styling */
+/* Restored Banner Size */
 .home-banner img {
-  width: 100%; /* Reduce size */
-  height: auto;
-  max-height: 60vh; /* Reduce max height slightly */
-  object-fit: cover; /* Crop excess parts */
+  width: 100%; /* Scale dynamically to the full width of the screen */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 70vh; /* Original height restored */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
 }
 
 /* Navigation Tabs */
@@ -84,31 +84,17 @@ footer {
   margin-top: 20px;
 }
 
+/* SG.jpg Banner Styling (Restored Original Size) */
+.home-banner img {
+  max-height: 70vh; /* Restored max height */
+}
+
 /* Contact Page Background */
 .contact-page {
-  background-image: url('images/Contact1.png'); /* Restore Contact1.png */
+  background-image: url('images/Contact1.png'); /* Ensure Contact1.png is loaded */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 20px;
   color: white; /* Ensure text is readable on the background */
-}
-
-/* Arrow Styling for Paragraphs */
-.arrow-paragraph {
-  position: relative;
-  padding-left: 30px; /* Space for the arrow */
-}
-
-.arrow-paragraph::before {
-  content: ""; /* Add an empty content for the pseudo-element */
-  position: absolute;
-  left: 0; /* Align the arrow to the left of the paragraph */
-  top: 50%; /* Vertically center the arrow */
-  transform: translateY(-50%); /* Adjust for perfect centering */
-  width: 20px; /* Width of the arrow image */
-  height: 20px; /* Height of the arrow image */
-  background-image: url('images/arrow.png'); /* Path to the arrow image */
-  background-size: contain; /* Ensure the image scales properly */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
 }
