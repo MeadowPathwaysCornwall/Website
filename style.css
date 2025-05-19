@@ -1,94 +1,49 @@
-/* General Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Meadow Pathways Cornwall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo">
+  </div>
 
-h1, h2, h3 {
-  margin: 10px 0;
-}
+  <!-- Banner -->
+  <div class="home-banner">
+    <img src="banner.png" alt="Decorative Banner for Home Page">
+  </div>
 
-p {
-  margin: 10px 0;
-}
+  <!-- Navigation -->
+  <nav class="navigation-bar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="safeguarding.html">Safeguarding</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-/* Navigation Bar */
-.navigation-bar {
-  background-color: #004d40;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
+  <!-- Content -->
+  <section>
+    <h1>Welcome to Meadow Pathways Cornwall</h1>
+    <p class="arrow-paragraph">
+      At Meadow Pathways Well-being and Education, we believe every young person deserves a route that works for them. Our specialist EOTAS (Education Otherwise Than At School) provision offers therapeutic, flexible support that follows the learner — not the other way around.
+    </p>
+    <p class="arrow-paragraph">
+      Like pathways through a meadow, no two journeys are the same. We walk alongside each child, offering choice, guidance, and care, helping them navigate challenges and reconnect with learning in a way that feels safe, meaningful, and empowering.
+    </p>
+    <p class="arrow-paragraph">
+      Our bespoke programmes support children and young people with SEMH needs, neurodiversity, or those unable to access traditional settings. Through personalised teaching, enrichment, and well-being sessions, we create space for growth, confidence, and hope.
+    </p>
+  </section>
 
-.navigation-bar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navigation-bar ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-.navigation-bar ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.navigation-bar ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Logo Styling */
-.logo-container {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.logo {
-  width: 20%; /* Dynamically scale the logo to 20% of the screen width */
-  max-width: 150px; /* Set a maximum width for the logo */
-  height: auto; /* Maintain aspect ratio */
-  animation: wave 2s infinite; /* Add waving animation */
-}
-
-/* Banner Styling */
-.home-banner img {
-  width: 100%; /* Scale dynamically to the full width of the screen */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 70vh; /* Limit the height to 70% of the viewport */
-  object-fit: contain; /* Ensure the entire image is visible without cropping */
-}
-
-/* Waving Animation */
-@keyframes wave {
-  0% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-  25% {
-    transform: rotate(1.5deg) skewX(2deg);
-  }
-  50% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-  75% {
-    transform: rotate(-1.5deg) skewX(-2deg);
-  }
-  100% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #004d40;
-  color: white;
-  padding: 20px 0;
-  margin-top: 20px;
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Meadow Pathways Cornwall. All rights reserved.</p>
+  </footer>
+</body>
+</html>
