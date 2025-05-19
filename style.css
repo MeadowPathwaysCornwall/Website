@@ -37,28 +37,27 @@ p {
   100% { transform: rotate(0deg) skewX(0deg); }
 }
 
-/* SG.jpg Banner Styling (Reduced Size for Quality) */
-.home-banner img {
-  width: 100%; /* Scale dynamically to the full width of the screen */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 60vh; /* Reduced size slightly for better quality */
-  object-fit: contain; /* Ensure the entire image is visible without cropping */
-}
-
 /* Navigation Tabs */
 .nav-tabs {
   display: flex;
   justify-content: center;
-  background-color: #A9BA9D; /* Bright green for tabs */
+  background-color: #50C878; /* Bright green for tabs */
   margin: 0;
   padding: 10px 0;
   list-style: none;
-  border-bottom: 2px solid #9DC183;
+  border-bottom: 2px solid #A9BA9D;
+ .nav-tabs li {
+  margin: 0 15px;
+} 
+}
+/* Banner Styling */
+.home-banner img {
+  width: 100%; /* Scale dynamically to the full width of the screen */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 70vh; /* Original height */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
 }
 
-.nav-tabs li {
-  margin: 0 15px;
-}
 
 .nav-tabs li a {
   text-decoration: none;
@@ -79,12 +78,12 @@ p {
 .policy-tabs {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px; /* Space between tabs */
   margin-top: 20px;
 }
 
 .policy-tabs img {
-  width: 100px; /* Adjust size of the book image */
+  width: 150px; /* Larger size for the book image */
   height: auto; /* Maintain aspect ratio */
   cursor: pointer; /* Make it clear these are clickable */
   transition: transform 0.2s ease;
@@ -97,7 +96,7 @@ p {
 /* Footer */
 footer {
   text-align: center;
-  background-color: #9DC183;
+  background-color: #004d40;
   color: white;
   padding: 20px 0;
   margin-top: 20px;
@@ -105,7 +104,7 @@ footer {
 
 /* Contact Page Background */
 .contact-page {
-  background-image: url('images/contact1.png'); /* Ensure contact1.png is loaded */
+  background-image: url('images/Contact1.png'); /* Ensure Contact1.png is loaded */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
