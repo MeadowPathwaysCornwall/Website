@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f9f9f9;
+  background-color:#A9BA9D ;
 }
 
 h1, h2, h3 {
@@ -26,6 +26,25 @@ p {
   width: 20%; /* Dynamically scale the logo to 20% of the screen width */
   max-width: 150px; /* Set a maximum width for the logo */
   height: auto; /* Maintain aspect ratio */
+  animation: wave 2s infinite; /* Add waving animation */
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  20% {
+    transform: rotate(5deg) skewX(6deg);
+  }
+  50% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  80% {
+    transform: rotate(-5deg) skewX(-6deg);
+  }
+  100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
 }
 
 /* Banner Styling */
@@ -36,55 +55,70 @@ p {
   object-fit: contain; /* Ensure the entire image is visible without cropping */
 }
 
-/* Policy Tabs Styling */
-.policy-tabs ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Navigation Tabs */
+.nav-tabs {
   display: flex;
-  justify-content: center; /* Center align the tabs */
-  background-color: #f9f9f9;
-  margin-top: 20px;
-}
-
-.policy-tabs ul li {
-  margin: 0 10px;
-}
-
-.policy-tabs ul li a {
-  display: inline-block;
-  padding: 20px 30px; /* Make tabs larger */
-  font-size: 18px; /* Increase font size */
-  text-decoration: none;
-  color: white;
+  justify-content: center;
   background-color: #A9BA9D; /* Tab background color */
-  border-radius: 8px; /* Rounded corners */
-  position: relative; /* For the book image */
-  overflow: hidden; /* Ensures the book image stays within the tab */
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  border-bottom: 2px solid #8FA186; /* Border to separate tabs from content */
 }
 
-.policy-tabs ul li a:hover {
-  background-color: #8FA186; /* Darker shade on hover */
+.nav-tabs li {
+  margin: 0 15px;
 }
 
-.policy-tabs ul li a::before {
-  content: ""; /* Add decorative book image */
+.nav-tabs li a {
+  text-decoration: none;
+  color: #333; /* Text color */
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #D0F0C0; /* Background color for tabs */
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-tabs li a:hover {
+  background-color: #A9BA9D; /* Darker shade on hover */
+  color: white;
+}
+
+/* Arrow Styling for Paragraphs */
+.arrow-paragraph {
+  position: relative;
+  padding-left: 30px; /* Space for the arrow */
+}
+
+.arrow-paragraph::before {
+  content: ""; /* Add an empty content for the pseudo-element */
   position: absolute;
-  top: 50%;
-  left: 10px; /* Adjust position of the image */
-  transform: translateY(-50%);
-  width: 24px; /* Size of the book image */
-  height: 24px;
-  background-image: url('images/book.jpg'); /* Path to the book image */
-  background-size: cover;
-  background-repeat: no-repeat;
+  left: 0; /* Align the arrow to the left of the paragraph */
+  top: 50%; /* Vertically center the arrow */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  width: 20px; /* Width of the arrow image */
+  height: 20px; /* Height of the arrow image */
+  background-image: url('images/arrow.png'); /* Path to the arrow image */
+  background-size: contain; /* Ensure the image scales properly */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background-color: #004d40;
+  background-color:#A9BA9D ;
   color: white;
   padding: 20px 0;
   margin-top: 20px;
+}
+
+/* Contact Page Background */
+.contact-page {
+  background-image: url('images/contact-background.jpg'); /* Add background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  color: white; /* Ensure text is readable on the background */
 }
