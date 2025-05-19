@@ -49,11 +49,11 @@ p {
 .nav-tabs {
   display: flex;
   justify-content: center;
-  background-color: #50C878; /* Bright green for tabs */
+  background-color: #A9BA9D; /* Bright green for tabs */
   margin: 0;
   padding: 10px 0;
   list-style: none;
-  border-bottom: 2px solid #A9BA9D;
+  border-bottom: 2px solid #9DC183;
 }
 
 .nav-tabs li {
@@ -97,7 +97,7 @@ p {
 /* Footer */
 footer {
   text-align: center;
-  background-color: #004d40;
+  background-color: #9DC183;
   color: white;
   padding: 20px 0;
   margin-top: 20px;
@@ -105,7 +105,7 @@ footer {
 
 /* Contact Page Background */
 .contact-page {
-  background-image: url('images/Contact1.png'); /* Ensure Contact1.png is loaded */
+  background-image: url('images/contact1.png'); /* Ensure contact1.png is loaded */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
