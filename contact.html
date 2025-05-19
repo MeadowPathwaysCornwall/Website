@@ -6,12 +6,10 @@
   <title>Contact Us - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="contact-page"> <!-- Using "contact-page" to apply background -->
+<body class="contact-page">
   <!-- Logo -->
-  <div class="home-button">
-    <a href="index.html">
-      <img src="Logo.png" alt="Meadow Pathways Cornwall Logo">
-    </a>
+  <div class="logo-container">
+    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo">
   </div>
 
   <!-- Navigation -->
@@ -20,41 +18,30 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="safeguarding.html">Safeguarding</a></li>
-      <li><a href="complaints.html">Complaints</a></li>
+      <li><a href="#complaints">Complaints</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
 
-  <!-- Contact Page Banner -->
-  <div class="contact-banner">
-    <img src="SG.jpg" alt="Decorative Banner for Contact Page">
-  </div>
+  <!-- Contact Form -->
+  <section>
+    <h1>Contact Us</h1>
+    <p>Phone 1: Michelle Pascoe</p>
+    <p>Phone 2: Zoe Waitz</p>
 
-  <!-- Contact Information -->
-  <div class="contact-section">
-    <h2>Contact Us</h2>
-    <p>If you have any questions or would like to know more about Meadow Pathways, feel free to reach out to us.</p>
-    <p>Email: <a href="mailto:meadowpathwayscornwall@outlook.com">meadowpathwayscornwall@outlook.com</a></p>
-    <p>Phone 1: <a href="tel:07932243358">07932 243358</a></p>
-    <p>Phone 2: <a href="tel:07775733587">07775 733587</a></p>
-  </div>
-
-  <!-- Interactive Contact Form -->
-  <div class="contact-form">
-    <h3>Send Us a Message</h3>
     <form action="https://formspree.io/f/example" method="POST">
       <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+      <input type="email" id="email" name="email" required>
 
       <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
       <button type="submit">Send Message</button>
     </form>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer>
