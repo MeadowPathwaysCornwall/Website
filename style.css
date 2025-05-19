@@ -1,60 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Safeguarding - Meadow Pathways Cornwall</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Logo -->
-  <div class="logo-container">
-    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo">
-  </div>
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
 
-  <!-- Banner -->
-  <div class="safeguarding-banner">
-    <img src="SG.png" alt="Safeguarding Banner">
-  </div>
+h1, h2, h3 {
+  margin: 10px 0;
+}
 
-  <!-- Navigation -->
-  <nav class="navigation-bar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="safeguarding.html">Safeguarding</a></li>
-      <li><a href="#complaints">Complaints</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </nav>
+p {
+  margin: 10px 0;
+}
 
-  <!-- Safeguarding Content -->
-  <section>
-    <h1>Safeguarding</h1>
-    <img src="Arrow.png" alt="Decorative Arrow" class="arrow-icon">
-    <p>At Meadow Pathways Well-being and Education, safeguarding and promoting the welfare of children is our highest priority. We are fully committed to ensuring that every young person in our care feels safe, supported, and empowered to thrive.</p>
-    <p>We follow the statutory guidance outlined in the Department for Education’s Keeping Children Safe in Education (KCSIE) 2024, which defines safeguarding and promoting the welfare of children as:</p>
-    <blockquote>
-      “Protecting children from maltreatment; preventing the impairment of children’s mental and physical health or development; ensuring that children grow up in circumstances consistent with the provision of safe and effective care; and taking action to enable all children to have the best outcomes.”
-    </blockquote>
-    <p>Our safeguarding ethos is underpinned by the belief that every child deserves to be heard, protected, and supported in a nurturing and respectful environment. We take a trauma-informed approach, working in close partnership with families, professionals, and specialist services to ensure holistic care for every learner.</p>
-    <p>All staff, including partners and visiting professionals, are trained to recognise, respond to, and report any concerns in line with national and local safeguarding procedures. Our Designated Safeguarding Lead (DSL) oversees all aspects of safeguarding to ensure we meet and exceed our statutory responsibilities.</p>
-    <p>Safeguarding is not just a policy — it is a core part of our culture.</p>
+/* Navigation Bar */
+.navigation-bar {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <a href="MPCE_EOTAS_Safeguarding_Policy.docx" target="_blank">
-        <img src="book.png" alt="Safeguarding Policy">
-      </a>
-      <a href="Meadow_Pathways_Complaints_Policy.docx" target="_blank">
-        <img src="book.png" alt="Complaints Policy">
-      </a>
-    </div>
-  </section>
+.navigation-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Meadow Pathways Cornwall. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+.navigation-bar ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navigation-bar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigation-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Logo */
+.logo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  animation: wave 2s infinite;
+}
+
+/* Banner */
+.home-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* Section Styling */
+section {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #004d40;
+  color: white;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* Tabs for Safeguarding Page */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tabs a img {
+  width: 100px;
+  height: auto;
+}
+
+/* Arrow Icon */
+.arrow-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.arrow-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 15px;
+}
+
+/* Contact Page Form */
+.contact-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-page form label {
+  font-weight: bold;
+}
+
+.contact-page form input,
+.contact-page form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-page form button {
+  background-color: #004d40;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.contact-page form button:hover {
+  background-color: #00695c;
+}
+
+/* Animation for Logo */
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
