@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #A9BA9D;
+  background-color: #f9f9f9;
 }
 
 h1, h2, h3 {
@@ -14,16 +14,6 @@ h1, h2, h3 {
 
 p {
   margin: 10px 0;
-}
-
-/* Arrow Styling for Paragraphs */
-.arrow-paragraph {
-  position: relative; /* Enables positioning for the arrow */
-  padding-left: 40px; /* Space for the arrow */
-  background-image: url('arrow.png'); /* Add the arrow image */
-  background-size: 20px 20px; /* Size of the arrow */
-  background-repeat: no-repeat; /* Prevent repetition */
-  background-position: left center; /* Position the arrow to the left of the text */
 }
 
 /* Navigation Bar */
@@ -64,6 +54,7 @@ p {
   width: 20%; /* Dynamically scale the logo to 20% of the screen width */
   max-width: 150px; /* Set a maximum width for the logo */
   height: auto; /* Maintain aspect ratio */
+  animation: wave 2s infinite; /* Add waving animation */
 }
 
 /* Banner Styling */
@@ -74,10 +65,29 @@ p {
   object-fit: contain; /* Ensure the entire image is visible without cropping */
 }
 
+/* Waving Animation */
+@keyframes wave {
+  0% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  25% {
+    transform: rotate(1.5deg) skewX(2deg);
+  }
+  50% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  75% {
+    transform: rotate(-1.5deg) skewX(-2deg);
+  }
+  100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+}
+
 /* Footer */
 footer {
   text-align: center;
-  background-color: #004d40;
+  background-color: #A9BA9D;
   color: white;
   padding: 20px 0;
   margin-top: 20px;
