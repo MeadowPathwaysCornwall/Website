@@ -1,60 +1,26 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f1fdf3;
-}
-
-.home-button img {
+.logo-container img {
   width: 150px;
   display: block;
   margin: 10px auto;
+  animation: wave 2s infinite;
 }
 
-/* Navigation Bar */
-.navigation-bar {
-  background-color: rgba(217, 228, 221, 0.8);
-  padding: 10px 0;
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
 
-.navigation-bar ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation-bar a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #2c3e50;
-}
-
-/* Home Banner */
-.home-banner {
-  position: relative;
-  text-align: center;
-}
-
-.home-banner img {
-  width: 100%;
-  height: auto;
+.paragraph-break {
   display: block;
+  margin: 20px auto;
+  width: 50px;
 }
 
-.logo-centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Contact Page */
-.contact-page {
-  background-image: url('contact1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+.tabs img {
+  width: 50px;
+  margin: 10px;
+  cursor: pointer;
 }
