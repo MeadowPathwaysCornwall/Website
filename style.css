@@ -33,14 +33,14 @@ p {
   0% {
     transform: rotate(0deg) skewX(0deg);
   }
-  25% {
-    transform: rotate(1.5deg) skewX(2deg);
+  20% {
+    transform: rotate(3deg) skewX(4deg);
   }
   50% {
     transform: rotate(0deg) skewX(0deg);
   }
-  75% {
-    transform: rotate(-1.5deg) skewX(-2deg);
+  80% {
+    transform: rotate(-3deg) skewX(-4deg);
   }
   100% {
     transform: rotate(0deg) skewX(0deg);
@@ -58,11 +58,20 @@ p {
 /* Arrow Styling for Paragraphs */
 .arrow-paragraph {
   position: relative;
-  padding-left: 40px; /* Space for the arrow */
-  background-image: url('images/arrow.png'); /* Correct path */
-  background-size: 20px 20px; /* Size of the arrow */
-  background-repeat: no-repeat; /* Prevent repetition */
-  background-position: left center; /* Align the arrow to the left */
+  padding-left: 30px; /* Space for the arrow */
+}
+
+.arrow-paragraph::before {
+  content: ""; /* Add an empty content for the pseudo-element */
+  position: absolute;
+  left: 0; /* Align the arrow to the left of the paragraph */
+  top: 50%; /* Vertically center the arrow */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  width: 20px; /* Width of the arrow image */
+  height: 20px; /* Height of the arrow image */
+  background-image: url('images/arrow.png'); /* Path to the arrow image */
+  background-size: contain; /* Ensure the image scales properly */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
 /* Navigation Bar */
