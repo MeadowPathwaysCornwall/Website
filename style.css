@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color:#A9BA9D ;
+  background-color: #A9BA9D; /* Natural green color scheme */
 }
 
 h1, h2, h3 {
@@ -23,47 +23,37 @@ p {
 }
 
 .logo {
-  width: 20%; /* Dynamically scale the logo to 20% of the screen width */
-  max-width: 150px; /* Set a maximum width for the logo */
-  height: auto; /* Maintain aspect ratio */
-  animation: wave 2s infinite; /* Add waving animation */
+  width: 20%;
+  max-width: 150px;
+  height: auto;
+  animation: wave 2s infinite;
 }
 
 @keyframes wave {
-  0% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-  20% {
-    transform: rotate(5deg) skewX(6deg);
-  }
-  50% {
-    transform: rotate(0deg) skewX(0deg);
-  }
-  80% {
-    transform: rotate(-5deg) skewX(-6deg);
-  }
-  100% {
-    transform: rotate(0deg) skewX(0deg);
-  }
+  0% { transform: rotate(0deg) skewX(0deg); }
+  20% { transform: rotate(5deg) skewX(6deg); }
+  50% { transform: rotate(0deg) skewX(0deg); }
+  80% { transform: rotate(-5deg) skewX(-6deg); }
+  100% { transform: rotate(0deg) skewX(0deg); }
 }
 
-/* Banner Styling */
+/* SG.jpg Banner Styling */
 .home-banner img {
-  width: 100%; /* Scale dynamically to the full width of the screen */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 70vh; /* Limit the height to 70% of the viewport */
-  object-fit: contain; /* Ensure the entire image is visible without cropping */
+  width: 100%; /* Reduce size */
+  height: auto;
+  max-height: 60vh; /* Reduce max height slightly */
+  object-fit: cover; /* Crop excess parts */
 }
 
 /* Navigation Tabs */
 .nav-tabs {
   display: flex;
   justify-content: center;
-  background-color: #A9BA9D; /* Tab background color */
+  background-color: #50C878; /* Bright green for tabs */
   margin: 0;
   padding: 10px 0;
   list-style: none;
-  border-bottom: 2px solid #8FA186; /* Border to separate tabs from content */
+  border-bottom: 2px solid #A9BA9D;
 }
 
 .nav-tabs li {
@@ -72,17 +62,36 @@ p {
 
 .nav-tabs li a {
   text-decoration: none;
-  color: #333; /* Text color */
+  color: white; /* White text */
   font-size: 16px;
   padding: 10px 20px;
-  background-color: #D0F0C0; /* Background color for tabs */
+  background-color: #50C878; /* Tab background color */
   border-radius: 5px;
-  transition: all 0.3s ease; /* Smooth hover effect */
+  transition: all 0.3s ease;
 }
 
 .nav-tabs li a:hover {
-  background-color: #A9BA9D; /* Darker shade on hover */
+  background-color: #A9BA9D; /* Softer shade on hover */
   color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #004d40;
+  color: white;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+/* Contact Page Background */
+.contact-page {
+  background-image: url('images/Contact1.png'); /* Restore Contact1.png */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  color: white; /* Ensure text is readable on the background */
 }
 
 /* Arrow Styling for Paragraphs */
@@ -102,23 +111,4 @@ p {
   background-image: url('images/arrow.png'); /* Path to the arrow image */
   background-size: contain; /* Ensure the image scales properly */
   background-repeat: no-repeat; /* Prevent the image from repeating */
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  background-color:#A9BA9D ;
-  color: white;
-  padding: 20px 0;
-  margin-top: 20px;
-}
-
-/* Contact Page Background */
-.contact-page {
-  background-image: url('images/contact-background.jpg'); /* Add background image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 20px;
-  color: white; /* Ensure text is readable on the background */
 }
