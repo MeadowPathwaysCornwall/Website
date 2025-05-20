@@ -5,7 +5,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #A9BA9D;
+  background-color: #A9BA9D; /* Natural green color scheme */
 }
 
 h1, h2, h3 {
@@ -16,6 +16,7 @@ p {
   margin: 10px 0;
 }
 
+/* Logo Styling */
 .logo-container {
   text-align: center;
   margin: 20px 0;
@@ -25,19 +26,31 @@ p {
   width: 20%;
   max-width: 150px;
   height: auto;
+  animation: wave 2s infinite;
 }
 
 .contact-logo .logo {
-  width: 30%;
+  width: 30%; /* Increase the size of the logo for the contact page */
   max-width: 250px;
 }
 
+@keyframes wave {
+  0% { transform: rotate(0deg) skewX(0deg); }
+  20% { transform: rotate(5deg) skewX(6deg); }
+  50% { transform: rotate(0deg) skewX(0deg); }
+  80% { transform: rotate(-5deg) skewX(-6deg); }
+  100% { transform: rotate(0deg) skewX(0deg); }
+}
+
+/* Navigation Tabs */
 .nav-tabs {
   display: flex;
   justify-content: center;
-  background-color: #50C878;
+  background-color: #50C878; /* Bright green for tabs */
+  margin: 0;
   padding: 10px 0;
   list-style: none;
+  border-bottom: 2px solid #A9BA9D;
 }
 
 .nav-tabs li {
@@ -46,50 +59,35 @@ p {
 
 .nav-tabs li a {
   text-decoration: none;
-  color: white;
+  color: white; /* White text */
   font-size: 16px;
   padding: 10px 20px;
-  background-color: #50C878;
+  background-color: #50C878; /* Tab background color */
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
 .nav-tabs li a:hover {
-  background-color: #A9BA9D;
+  background-color: #A9BA9D; /* Softer shade on hover */
+  color: white;
 }
 
+/* Contact Page Specific Styling */
 .contact-page {
-  background-image: url('images/contact1.png');
+  background-image: url('contact1.png'); /* Updated path for contact1.png */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: white;
-  min-height: 100vh;
-
-}
-/* Safeguarding Commitment Section Styling */
-.safeguarding-commitment {
-  background-color: #F5F5F5; /* Light grey background */
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 800px;
-  text-align: center;
-}
-
-.safeguarding-commitment h1 {
-  color: #004d40; /* Dark green for the title */
-  margin-bottom: 15px;
-}
-
-.safeguarding-commitment p {
-  color: #333; /* Standard text color */
-  line-height: 1.6;
-  margin-bottom: 15px;
+  color: white; /* White text for readability */
+  min-height: 100vh; /* Ensure it spans the whole page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .contact-content {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8); /* Transparent black background for readability */
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
@@ -118,27 +116,10 @@ p {
   background-color: #A9BA9D;
 }
 
-.policy-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 20px 0;
-}
-
-.policy-tabs img {
-  width: 150px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.policy-tabs img:hover {
-  transform: scale(1.1);
-}
-
-.policy-tabs p {
-  text-align: center;
-  color: #333;
-  font-size: 14px;
-  margin-top: 5px;
+/* Home Page Banner Styling */
+.home-banner img {
+  width: 100%; /* Scale dynamically to the full width of the screen */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 60vh; /* Reduced size to ensure text is visible */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
 }
