@@ -34,7 +34,8 @@ h1, h2, h3, p {
 }
 
 /* Navigation Tabs */
-.nav-tabs {
+.nav-tabs,
+.navigation-bar ul {
   display: flex;
   justify-content: center;
   background-color: #50C878;
@@ -44,11 +45,13 @@ h1, h2, h3, p {
   border-bottom: 2px solid #A9BA9D;
 }
 
-.nav-tabs li {
+.nav-tabs li,
+.navigation-bar li {
   margin: 0 15px;
 }
 
-.nav-tabs li a {
+.nav-tabs li a,
+.navigation-bar li a {
   text-decoration: none;
   color: white;
   font-size: 16px;
@@ -58,7 +61,8 @@ h1, h2, h3, p {
   transition: all 0.3s ease;
 }
 
-.nav-tabs li a:hover {
+.nav-tabs li a:hover,
+.navigation-bar li a:hover {
   background-color: #A9BA9D;
   color: white;
 }
@@ -101,10 +105,12 @@ footer {
 
 /* Contact Page Background */
 .contact-page {
-  background-image: url('images/contact1.png'); /* Adjust path if needed */
+  background-image: url('images/contact1.png');
+  background-color: #7b9d78; /* fallback */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: white;
   min-height: 100vh;
+  padding: 20px;
 }
