@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Meadow Pathways Cornwall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="contact-page">
@@ -22,16 +23,30 @@
   </ul>
 
   <!-- Contact Section -->
-  <section>
+  <section class="contact-content">
     <h1>Contact Us</h1>
     <p>Contact Michelle Pascoe: <strong>07932 243358</strong></p>
     <p>Contact Zoe Wiatz: <strong>07775 733587</strong></p>
     <p>Email: <strong>info@meadowpathwayscornwall.co.uk</strong></p>
+
+    <!-- Contact Form -->
+    <form action="submit_form.php" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Meadow Pathways Well-Being and Education Cornwall ltd. All rights reserved.</p>
+    <p>&copy; 2025 Meadow Pathways Cornwall Ltd. All rights reserved.</p>
   </footer>
 </body>
 </html>
