@@ -46,7 +46,6 @@ p {
   list-style: none;
   border-bottom: 2px solid #A9BA9D;
 }
-
 /* Banner Styling */
 .home-banner img {
   width: 100%; /* Scale dynamically to the full width of the screen */
@@ -54,7 +53,6 @@ p {
   max-height: 70vh; /* Original height */
   object-fit: contain; /* Ensure the entire image is visible without cropping */
 }
-
 
 
 .nav-tabs li {
@@ -85,7 +83,7 @@ p {
 }
 
 .policy-tabs img {
-  width: 150px; /* Larger size for the book image */
+  width: 250px; /* Larger size for the book image */
   height: auto; /* Maintain aspect ratio */
   cursor: pointer; /* Make it clear these are clickable */
   transition: transform 0.2s ease;
@@ -123,7 +121,7 @@ footer {
 
 /* Contact Page Background */
 .contact-page {
-  background-image: url('images/contact1.png'); /* Ensure Contact1.png is loaded */
+  background-image: url('images/contact1.png'); /* Ensure contact1.png is loaded */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
