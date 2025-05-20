@@ -66,6 +66,27 @@ p {
   min-height: 100vh;
 
 }
+/* Safeguarding Commitment Section Styling */
+.safeguarding-commitment {
+  background-color: #F5F5F5; /* Light grey background */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.safeguarding-commitment h1 {
+  color: #004d40; /* Dark green for the title */
+  margin-bottom: 15px;
+}
+
+.safeguarding-commitment p {
+  color: #333; /* Standard text color */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
 
 .contact-content {
   background: rgba(0, 0, 0, 0.8);
