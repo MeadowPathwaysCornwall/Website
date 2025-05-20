@@ -29,6 +29,18 @@ p, label, input, textarea, button {
   max-width: 150px;
   height: auto;
 }
+/* Home Page Banner Styling */
+.home-banner {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.home-banner img {
+  width: 100%; /* Scale dynamically to the full width of the screen */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 60vh; /* Restrict the maximum height to ensure it's smaller */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
+}
 
 /* Navigation Tabs */
 .nav-tabs {
