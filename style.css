@@ -104,7 +104,7 @@ footer {
 
 /* Contact Page Background */
 .contact-page {
-  background-image: url('images/Contact1.png'); /* Ensure Contact1.png is loaded */
+  background-image: url('images/contact1.png'); /* Ensure contact1.png is loaded */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
