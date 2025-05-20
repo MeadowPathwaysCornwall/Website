@@ -36,15 +36,6 @@ p {
   80% { transform: rotate(-5deg) skewX(-6deg); }
   100% { transform: rotate(0deg) skewX(0deg); }
 }
-
-/* Banner Styling */
-.home-banner img {
-  width: 100%; /* Scale dynamically to the full width of the screen */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 70vh; /* Original height */
-  object-fit: contain; /* Ensure the entire image is visible without cropping */
-}
-
 /* Navigation Tabs */
 .nav-tabs {
   display: flex;
@@ -55,6 +46,16 @@ p {
   list-style: none;
   border-bottom: 2px solid #A9BA9D;
 }
+
+/* Banner Styling */
+.home-banner img {
+  width: 100%; /* Scale dynamically to the full width of the screen */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 70vh; /* Original height */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
+}
+
+
 
 .nav-tabs li {
   margin: 0 15px;
