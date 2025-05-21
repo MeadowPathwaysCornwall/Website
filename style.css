@@ -2,27 +2,67 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'Poppins', Arial, sans-serif; /* Modern and attractive font */
+  font-size: 18px; /* Slightly larger font size */
   line-height: 1.8;
   color: #333;
-  background-color: #A9BA9D;
+  background-color: #A9BA9D; /* Natural green color scheme for background */
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', Arial, sans-serif; /* Use the same font for headings */
+  margin: 10px 0;
+}
+
+p, label, input, textarea, button, li, a {
+  font-family: 'Poppins', Arial, sans-serif; /* Consistent styling across the website */
+}
+
+/* Logo Styling */
+.logo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo {
+  width: 150px; /* Adjust size for the logo */
+  height: auto;
 }
 
 /* Navigation Tabs */
 .nav-tabs {
   display: flex;
   justify-content: center;
-  background-color: #50C878;
+  background-color: #50C878; /* Bright green for tabs */
   margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  border-bottom: 2px solid #A9BA9D;
 }
 
-/* Banner Styling */
-.home-banner {
+.nav-tabs li {
+  margin: 0 15px;
+}
+
+.nav-tabs li a {
+  text-decoration: none;
+  color: white; /* White text */
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #50C878; /* Tab background color */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs li a:hover {
+  background-color: #A9BA9D; /* Softer shade on hover */
+  color: white;
+}
+
+/* Footer Styling */
+footer {
   text-align: center;
-}
-
-.home-banner img {
-  width: 100%;
-  height: auto;
+  padding: 10px;
+  background-color: #50C878; /* Bright green footer */
+  color: white;
 }
