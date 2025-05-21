@@ -63,7 +63,6 @@ p, label, input, textarea, button, li, a {
   text-align: center;
   margin: 20px 0;
 }
-
 <div class="banner-container" style="text-align: center; margin: 20px 0;">
   <img src="banner.png" alt="Meadow Pathways Cornwall Banner" style="width: 100%; height: auto; max-height: 60vh; object-fit: contain;">
 </div>
