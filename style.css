@@ -9,41 +9,20 @@ body {
   background-color: #A9BA9D;
 }
 
-h1, h2, h3 {
-  font-family: 'Poppins', Arial, sans-serif;
-  margin: 10px 0;
-}
-
+/* Navigation Tabs */
 .nav-tabs {
   display: flex;
   justify-content: center;
   background-color: #50C878;
-}
-
-.nav-tabs li {
-  margin: 0 15px;
-}
-
-.nav-tabs li a {
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
+  margin: 0;
 }
 
 /* Banner Styling */
-.banner-container {
+.home-banner {
   text-align: center;
-  margin: 20px 0;
 }
 
-.banner-container img {
+.home-banner img {
   width: 100%;
   height: auto;
-  max-height: 60vh;
-  object-fit: contain;
-}
-
-/* Contact Page */
-.contact-content {
-  text-align: center;
 }
