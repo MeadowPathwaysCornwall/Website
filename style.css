@@ -58,15 +58,20 @@ p, label, input, textarea, button, li, a {
   background-color: #A9BA9D; /* Softer shade on hover */
   color: white;
 }
+
 /* Home Page Banner Styling */
 .home-banner {
   text-align: center;
   margin: 20px 0;
 }
-<div class="banner-container" style="text-align: center; margin: 20px 0;">
-  <img src="banner.png" alt="Meadow Pathways Cornwall Banner" style="width: 100%; height: auto; max-height: 60vh; object-fit: contain;">
-</div>
+
+.home-banner img {
+  width: 100%; /* Scale dynamically to the full width of the screen */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 60vh; /* Restrict the maximum height for smaller size */
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
 }
+
 /* Contact Page Specific Styling */
 .contact-page {
   background-image: url('contact1.png'); /* Background image */
