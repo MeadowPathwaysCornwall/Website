@@ -64,11 +64,9 @@ p, label, input, textarea, button, li, a {
   margin: 20px 0;
 }
 
-.home-banner img {
-  width: 40; /* Scale dynamically to the full width of the screen */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 50vh; /* Restrict the maximum height to ensure it's smaller */
-  object-fit: contain; /* Ensure the entire image is visible without cropping */
+<div class="banner-container" style="text-align: center; margin: 20px 0;">
+  <img src="banner.png" alt="Meadow Pathways Cornwall Banner" style="width: 100%; height: auto; max-height: 60vh; object-fit: contain;">
+</div>
 }
 /* Contact Page Specific Styling */
 .contact-page {
