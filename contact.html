@@ -6,44 +6,41 @@
   <title>Contact Us - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="contact-page" style="background-image: url('contact1.png'); background-size: cover; background-position: center;">
-  <!-- Logo -->
+<body class="contact-bg">
   <div class="logo-container">
-    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo">
+    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo" style="width: 200px; height: auto;">
   </div>
 
-  <!-- Navigation Tabs -->
   <ul class="nav-tabs">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="safeguarding.html">Safeguarding</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
     <li><a href="eotas.html">EOTAS Info</a></li>
   </ul>
 
-  <!-- Contact Section -->
   <section>
-    <h1 style="color: white; font-weight: bold;">Contact Us</h1>
-    <p style="color: white; font-weight: bold;">Contact Michelle Pascoe: <strong>07932 243358</strong></p>
-    <p style="color: white; font-weight: bold;">Contact Zoe Waitz: <strong>07775 733587</strong></p>
-    <p style="color: white; font-weight: bold;">Email: <strong>meadowpathwayscornwall@outlook.com</strong></p>
-
-    <!-- Contact Form -->
-    <form action="submit_form.php" method="POST" style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; max-width: 500px; margin: 20px auto;">
+    <h1>Contact Us</h1>
+    <p>
+      <strong>Email:</strong> <a href="mailto:meadowpathwayscornwall@outlook.com">meadowpathwayscornwall@outlook.com</a><br>
+      <strong>Phone:</strong> 01234 567890<br>
+      <strong>Main Contact:</strong> Jane Smith, Service Manager<br>
+      <strong>Address:</strong> Meadow Pathways Cornwall, Example Lane, Cornwall, TR1 2AB
+    </p>
+    <form class="contact-form" action="mailto:meadowpathwayscornwall@outlook.com" method="POST" enctype="text/plain">
       <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; padding: 10px; margin: 10px 0;">
+      <input type="text" id="name" name="Name" required>
 
       <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email address" required style="width: 100%; padding: 10px; margin: 10px 0;">
+      <input type="email" id="email" name="Email" required>
 
       <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required style="width: 100%; padding: 10px; margin: 10px 0;"></textarea>
+      <textarea id="message" name="Message" rows="4" required></textarea>
 
-      <button type="submit" style="background-color: #50C878; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.</p>
   </footer>
