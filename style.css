@@ -1,3 +1,171 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d4efdf;
+  background-image: url('BG.png');
+  background-size: contain;    /* Shows the whole BG.png image on all pages */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Contact Us page: contact1.png background */
+body.contact-bg {
+  background-image: url('contact1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #222;
+}
+
+/* EOTAS page: Uses BG.png as on all other pages */
+body.eotas-bg {
+  background-color: #54C571;
+  background-image: url('BG.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Navigation tabs - green background, white text */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  background: #52be80;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.nav-tabs li { margin: 0; }
+.nav-tabs a {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-tabs a:hover, .nav-tabs .active {
+  background: #7ee2aa;
+  color: #165684;
+}
+
+/* Main content section and info boxes - #d4efdf */
+section, .main-content-box, .contact-info, .policy-tabs-container {
+  background: #93C572 !important;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(40,60,60,0.06);
+}
+
+/* Policy tabs section (Safeguarding Page) */
+.policy-tabs-container {
+  margin: 30px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: #93C572 !important;
+  padding: 24px;
+  border-radius: 18px;
+}
+.policy-image-tab {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: url('IMG_3303.jpg') center center/cover no-repeat;
+  box-shadow: 0 4px 18px rgba(34, 64, 102, 0.14);
+  text-decoration: none;
+  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.policy-image-tab:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(30,45,60,0.21);
+}
+.policy-tab-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.18rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.32);
+  padding: 22px 18px;
+  border-radius: 11px;
+  text-align: center;
+  width: 88%;
+  box-sizing: border-box;
+}
+
+/* Team member section on About Us */
+.team-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.team-member-about {
+  display: flex;
+  align-items: flex-start;
+  background: #93C572;
+  border-radius: 18px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 12px rgba(40,60,60,0.06);
+  max-width: 800px;
+  width: 100%;
+  gap: 24px;
+}
+.team-member-about img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 24px;
+  flex-shrink: 0;
+}
+.team-member-about .text {
+  flex: 1;
+}
+
+/* Arrow icon for section headings (same size everywhere, clickable) */
+.section-arrow {
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  transition: transform 0.15s;
+}
+a:hover .section-arrow {
+  transform: scale(1.1);
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin: 40px 0 10px 0;
+  color: #444;
+  font-size: 0.98rem;
+  background: transparent;
+}
+
 .logo-container {
   text-align: center;
   margin: 20px 0;
@@ -10,6 +178,197 @@
   .logo { width: 120px; }
 }
 
+/* Contact form styling */
+.contact-form {
+  max-width: 340px;
+  margin: 28px auto 0 auto;
+  background: #93C572 !important;
+  padding: 20px 18px 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(40,60,60,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 0.95rem;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  margin-bottom: 6px;
+  resize: vertical;
+}
+.contact-form button {
+  font-size: 1rem;
+  padding: 8px 0;
+  border-radius: 6px;
+  background: #54C571;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #379b53;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .team-flex, .team-member-about { flex-direction: column; align-items: center; }
+  .team-member-about img { margin: 0 0 18px 0; }
+}
+@media (max-width: 600px) {
+  section, .policy-tabs-container, .main-content-box, .contact-info { padding: 10px; }
+  .team-member-about { padding: 10px; }
+};
+  background-image: url('BG.png');
+  background-size: contain;    /* Shows the whole BG.png image on all pages */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Contact Us page: contact1.png background */
+body.contact-bg {
+  background-image: url('contact1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #222;
+}
+
+/* EOTAS page: Uses BG.png as on all other pages */
+body.eotas-bg {
+  background-color: #54C571;
+  background-image: url('BG.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Navigation tabs - green background, white text */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  background: #52be80;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.nav-tabs li { margin: 0; }
+.nav-tabs a {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-tabs a:hover, .nav-tabs .active {
+  background: #7ee2aa;
+  color: #165684;
+}
+
+/* Main content section and info boxes - #d4efdf */
+section, .main-content-box, .contact-info, .policy-tabs-container {
+  background: #93C572 !important;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(40,60,60,0.06);
+}
+
+/* Policy tabs section (Safeguarding Page) */
+.policy-tabs-container {
+  margin: 30px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: #93C572 !important;
+  padding: 24px;
+  border-radius: 18px;
+}
+.policy-image-tab {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: url('IMG_3303.jpg') center center/cover no-repeat;
+  box-shadow: 0 4px 18px rgba(34, 64, 102, 0.14);
+  text-decoration: none;
+  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.policy-image-tab:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(30,45,60,0.21);
+}
+.policy-tab-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.18rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.32);
+  padding: 22px 18px;
+  border-radius: 11px;
+  text-align: center;
+  width: 88%;
+  box-sizing: border-box;
+}
+
+/* Team member section on About Us */
+.team-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.team-member-about {
+  display: flex;
+  align-items: flex-start;
+  background: #93C572;
+  border-radius: 18px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 12px rgba(40,60,60,0.06);
+  max-width: 800px;
+  width: 100%;
+  gap: 24px;
+}
+.team-member-about img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 24px;
+  flex-shrink: 0;
+}
+.team-member-about .text {
+  flex: 1;
+}
+
+/* Arrow icon for section headings (same size everywhere, clickable) */
 .section-arrow {
   vertical-align: middle;
   width: 32px;
@@ -19,4 +378,76 @@
 }
 a:hover .section-arrow {
   transform: scale(1.1);
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin: 40px 0 10px 0;
+  color: #444;
+  font-size: 0.98rem;
+  background: transparent;
+}
+
+.logo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.logo {
+  width: 200px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .logo { width: 120px; }
+}
+
+/* Contact form styling */
+.contact-form {
+  max-width: 340px;
+  margin: 28px auto 0 auto;
+  background: #93C572 !important;
+  padding: 20px 18px 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(40,60,60,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-form label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.contact-form input,
+.contact-form textarea {
+  font-size: 0.95rem;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  margin-bottom: 6px;
+  resize: vertical;
+}
+.contact-form button {
+  font-size: 1rem;
+  padding: 8px 0;
+  border-radius: 6px;
+  background: #54C571;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #379b53;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .team-flex, .team-member-about { flex-direction: column; align-items: center; }
+  .team-member-about img { margin: 0 0 18px 0; }
+}
+@media (max-width: 600px) {
+  section, .policy-tabs-container, .main-content-box, .contact-info { padding: 10px; }
+  .team-member-about { padding: 10px; }
 }
