@@ -29,7 +29,7 @@ body.eotas-bg {
   list-style: none;
   padding: 0;
   margin: 0 0 32px 0;
-  background: #93C572;
+  background: #45b39d;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -37,7 +37,7 @@ body.eotas-bg {
 .nav-tabs a {
   display: block;
   padding: 12px 24px;
-  color: #165684;
+  color: #45b39d;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.2s;
@@ -65,7 +65,7 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
 .team-member-about {
   display: flex;
   align-items: flex-start;
-  background: #93C572;
+  background: #45b39d;
   border-radius: 18px;
   padding: 24px;
   margin: 20px 0;
