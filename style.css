@@ -53,7 +53,7 @@ body.eotas-bg {
   color: #165684;
 }
 
-/* Main content section and info boxes - green */
+/* Main content section and info boxes - #d4efdf */
 section, .main-content-box, .contact-info, .policy-tabs-container {
   background: #93C572 !important;
   max-width: 900px;
