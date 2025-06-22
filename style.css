@@ -26,9 +26,8 @@ body.eotas-bg {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  Uses BG.png as on all other pages */
-body.eotas-bg {
 }
+
 /* Navigation tabs - green background, white text */
 .nav-tabs {
   display: flex;
@@ -220,7 +219,7 @@ footer {
   .team-member-about img { margin: 0 0 18px 0; }
 }
 @media (max-width: 600px) {
-  .logo { width: 200px; }
+  .logo { width: 100px; }
   section, .policy-tabs-container, .main-content-box, .contact-info { padding: 10px; }
   .team-member-about { padding: 10px; }
 }
