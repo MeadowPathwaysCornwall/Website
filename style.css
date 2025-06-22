@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #d4efdf;
   background-image: url('BG.png');
-  background-size: contain;    /* Shows the whole BG.png image on all pages */
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   color: #222;
@@ -142,7 +142,7 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   flex: 1;
 }
 
-/* Arrow icon for section headings (same size everywhere, clickable) */
+/* Arrow icon for section headings */
 .section-arrow {
   vertical-align: middle;
   width: 32px;
@@ -152,6 +152,12 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
 }
 a:hover .section-arrow {
   transform: scale(1.1);
+}
+
+/* Safeguarding arrow (make same size as EOTAS arrow, e.g. 80x80px) */
+.safeguarding-arrow {
+  width: 80px;
+  height: 80px;
 }
 
 /* Footer styling */
@@ -183,9 +189,9 @@ footer {
   margin: 30px 0 0 0;
 }
 .banner {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 /* Contact form styling */
