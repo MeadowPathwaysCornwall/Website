@@ -1,3 +1,30 @@
+/* Navigation Styling */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  background: #eaf6fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.nav-tabs li {
+  margin: 0;
+}
+.nav-tabs a {
+  display: block;
+  padding: 12px 24px;
+  color: #165684;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.nav-tabs a:hover, .nav-tabs .active {
+  background: #cbe5f5;
+}
+
+/* Policy Tabs Styling */
 .policy-tabs-container {
   margin: 30px auto;
   max-width: 600px;
