@@ -186,12 +186,12 @@ footer {
 /* Banner styling */
 .banner-container {
   text-align: center;
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 0;
 }
 .banner {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 /* Contact form styling */
