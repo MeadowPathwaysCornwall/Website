@@ -3,9 +3,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: #54C571;
   background-image: url('BG.png');
-  background-size: cover;   /* Ensures BG.png shows the same way on ALL pages */
-  background-position: center;
+  background-size: contain;    /* Shows the whole BG.png image on all pages */
   background-repeat: no-repeat;
+  background-position: center;
   color: #222;
   min-height: 100vh;
 }
@@ -23,7 +23,7 @@ body.contact-bg {
 body.eotas-bg {
   background-color: #54C571;
   background-image: url('BG.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
