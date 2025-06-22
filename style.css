@@ -21,7 +21,7 @@ body.contact-bg {
 
 /* EOTAS page: Uses BG.png as on all other pages */
 body.eotas-bg {
-  background-color: #54C571;
+  background-color: #d4efdf;
   background-image: url('BG.png');
   background-size: contain;
   background-position: center;
