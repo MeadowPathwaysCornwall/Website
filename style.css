@@ -52,6 +52,28 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   color: #fff !important;
 }
 
+/* Contact Info Bigger */
+.contact-info {
+  max-width: 1200px;
+  padding: 48px;
+  background: #588157 !important;
+  margin: 40px auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(40,60,60,0.10);
+  color: #fff !important;
+}
+
+/* Make the textarea/message box in the contact form bigger */
+.contact-form textarea {
+  min-height: 180px;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 8px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
 /* Banner styling - home page only */
 .banner-container {
   text-align: center;
@@ -75,7 +97,7 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   width: 100%;
 }
 .logo {
-  width: 300px;
+  width: 200px;
   height: auto;
   display: block;
 }
@@ -103,8 +125,8 @@ img {
 
 /* MP.jpg and ZW.jpg styling: smaller and centered */
 .mp-img, .zw-img {
-  max-width: 80px;
-  width: 80px;
+  max-width: 100px;
+  width: 100px;
   height: auto;
   display: block;
   margin: 25px auto;
