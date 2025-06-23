@@ -1,23 +1,23 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #a3b18a;
+  background-color: #588157;
   background-image: url('BG.png');
+  background-repeat: repeat-y;
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center; /* BG.png is higher */
-  color: #222;
+  background-position: top center;
+  color: #fff;
   min-height: 100vh;
 }
 
-/* Navigation tabs - green background, white text */
+/* Navigation tabs */
 .nav-tabs {
   display: flex;
   justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0 0 32px 0;
-  background: #588157;
+  background: #a3b18a;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -32,7 +32,7 @@ body {
 }
 .nav-tabs a:hover, .nav-tabs .active {
   background: #588157;
-  color: #a3b18a;
+  color: #fff;
 }
 
 /* Main content section and info boxes */
@@ -42,7 +42,8 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   margin: 40px auto;
   padding: 30px;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(40,60,60,0.06);
+  box-shadow: 0 2px 12px rgba(40,60,60,0.10);
+  color: #fff;
 }
 
 /* Banner styling - home page only */
@@ -51,7 +52,7 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   margin: 30px 0 0 0;
 }
 .banner {
-  max-width: 700px; /* Reduced size */
+  max-width: 700px;
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -59,6 +60,7 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   margin-right: auto;
 }
 
+/* Logo styling - always centered */
 .logo-container {
   display: flex;
   justify-content: center;
@@ -74,13 +76,12 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
 @media (max-width: 600px) {
   .logo { width: 120px; }
 }
-}
 
 /* Footer styling */
 footer {
   text-align: center;
   margin: 24px 0 8px 0;
-  color: #444;
+  color: #fff;
   font-size: 1rem;
   background: transparent;
   font-weight: bold;
@@ -93,7 +94,18 @@ img {
   display: block;
 }
 
-/* Safeguarding images bigger and well spaced */
+/* MP.jpg and ZW.jpg styling: same size and centered */
+.mp-img, .zw-img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Safeguarding images */
 .safeguarding-images {
   display: flex;
   flex-wrap: wrap;
@@ -103,32 +115,13 @@ img {
   margin-bottom: 28px;
 }
 .safeguarding-img {
-  max-width: 520px;
+  max-width: 350px;
   width: 100%;
-  height: auto;
   border-radius: 14px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* MP.jpg styling for responsiveness */
-.mp-img {
-  max-width: 200px;
-  width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-}
-/* ZW.jpg styling for responsiveness */
-.zw-img {
-  max-width: 200px;
-  width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-}
 /* Policy tabs section (Safeguarding Page) */
 .policy-tabs-container {
   margin: 30px auto;
@@ -137,7 +130,7 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  background: #93C572 !important;
+  background: #588157 !important;
   padding: 24px;
   border-radius: 18px;
 }
@@ -199,5 +192,5 @@ a:hover .section-arrow {
 }
 @media (max-width: 600px) {
   section, .policy-tabs-container, .main-content-box, .contact-info { padding: 10px; }
-  .safeguarding-img, .mp-img, .banner { max-width: 100%; }
+  .safeguarding-img, .mp-img, .zw-img, .banner { max-width: 100%; }
 }
