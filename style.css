@@ -5,7 +5,7 @@ body {
   background-image: url('BG.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: top center; /* Moves BG.png higher on the page */
+  background-position: top center; /* BG.png is higher */
   color: #222;
   min-height: 100vh;
 }
@@ -35,7 +35,7 @@ body {
   color: #165684;
 }
 
-/* Main content section and info boxes - #d4efdf */
+/* Main content section and info boxes */
 section, .main-content-box, .contact-info, .policy-tabs-container {
   background: #93C572 !important;
   max-width: 900px;
@@ -55,6 +55,8 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   width: 100%;
   height: auto;
   border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Logo styling */
@@ -80,6 +82,13 @@ footer {
   font-weight: bold;
 }
 
+/* All images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Safeguarding images bigger and well spaced */
 .safeguarding-images {
   display: flex;
@@ -92,7 +101,20 @@ footer {
 .safeguarding-img {
   max-width: 520px;
   width: 100%;
+  height: auto;
   border-radius: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MP.JPG styling for responsiveness */
+.mp-img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 /* Policy tabs section (Safeguarding Page) */
@@ -159,11 +181,11 @@ a:hover .section-arrow {
   height: 80px;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 800px) {
   .safeguarding-images { flex-direction: column; gap: 20px; }
 }
 @media (max-width: 600px) {
   section, .policy-tabs-container, .main-content-box, .contact-info { padding: 10px; }
-  .safeguarding-img { max-width: 100%; }
+  .safeguarding-img, .mp-img, .banner { max-width: 100%; }
 }
