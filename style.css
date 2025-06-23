@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #d4efdf;
+  background-color: a3b18a;
   background-image: url('BG.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0 0 32px 0;
-  background: #52be80;
+  background: 588157;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -37,7 +37,7 @@ body {
 
 /* Main content section and info boxes */
 section, .main-content-box, .contact-info, .policy-tabs-container {
-  background: #93C572 !important;
+  background: a3b18a !important;
   max-width: 900px;
   margin: 40px auto;
   padding: 30px;
@@ -59,17 +59,21 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   margin-right: auto;
 }
 
-/* Logo styling */
 .logo-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px 0;
+  width: 100%;
 }
 .logo {
   width: 200px;
   height: auto;
+  display: block;
 }
 @media (max-width: 600px) {
   .logo { width: 120px; }
+}
 }
 
 /* Footer styling */
@@ -109,8 +113,8 @@ img {
 
 /* MP.JPG styling for responsiveness */
 .mp-img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 200px;
+  width: 50%;
   height: auto;
   display: block;
   margin: 0 auto;
