@@ -97,7 +97,7 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   width: 100%;
 }
 .logo {
-  width: 350px;
+  width: 500px;
   height: auto;
   display: block;
 }
@@ -125,8 +125,8 @@ img {
 
 /* MP.jpg and ZW.jpg styling: smaller and centered */
 .mp-img, .zw-img {
-  max-width: 100px;
-  width: 100px;
+  max-width: 250px;
+  width: 150px;
   height: auto;
   display: block;
   margin: 25px auto;
