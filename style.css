@@ -5,12 +5,12 @@ body {
   background-image: url('BG.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center; /* Moves BG.png higher on the page */
   color: #222;
   min-height: 100vh;
 }
 
-/* Navigation tabs */
+/* Navigation tabs - green background, white text */
 .nav-tabs {
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ body {
   color: #165684;
 }
 
-/* Main content section and info boxes */
+/* Main content section and info boxes - #d4efdf */
 section, .main-content-box, .contact-info, .policy-tabs-container {
   background: #93C572 !important;
   max-width: 900px;
@@ -45,7 +45,57 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   box-shadow: 0 2px 12px rgba(40,60,60,0.06);
 }
 
-/* Policy tabs section */
+/* Banner styling - home page only */
+.banner-container {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+.banner {
+  max-width: 700px; /* Reduced size */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Logo styling */
+.logo-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.logo {
+  width: 200px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .logo { width: 120px; }
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin: 24px 0 8px 0;
+  color: #444;
+  font-size: 1rem;
+  background: transparent;
+  font-weight: bold;
+}
+
+/* Safeguarding images bigger and well spaced */
+.safeguarding-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.safeguarding-img {
+  max-width: 520px;
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* Policy tabs section (Safeguarding Page) */
 .policy-tabs-container {
   margin: 30px auto;
   max-width: 600px;
@@ -91,21 +141,6 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   box-sizing: border-box;
 }
 
-/* Safeguarding images bigger and well spaced */
-.safeguarding-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 28px;
-}
-.safeguarding-img {
-  max-width: 520px;
-  width: 100%;
-  border-radius: 14px;
-}
-
 /* Arrow icon for section headings */
 .section-arrow {
   vertical-align: middle;
@@ -124,30 +159,7 @@ a:hover .section-arrow {
   height: 80px;
 }
 
-/* Footer styling */
-footer {
-  text-align: center;
-  margin: 24px 0 8px 0;
-  color: #444;
-  font-size: 1rem;
-  background: transparent;
-  font-weight: bold;
-}
-
-/* Logo styling */
-.logo-container {
-  text-align: center;
-  margin: 20px 0;
-}
-.logo {
-  width: 200px;
-  height: auto;
-}
-@media (max-width: 600px) {
-  .logo { width: 120px; }
-}
-
-/* Responsive for images and tabs */
+/* Responsive adjustments */
 @media (max-width: 800px) {
   .safeguarding-images { flex-direction: column; gap: 20px; }
 }
