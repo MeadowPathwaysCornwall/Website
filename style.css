@@ -99,10 +99,12 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  }
+}
+
+/* MP.jpg and ZW.jpg styling: smaller and centered */
 .mp-img, .zw-img {
-  max-width: 100px;
-  width: 50%;
+  max-width: 80px;
+  width: 80px;
   height: auto;
   display: block;
   margin: 25px auto;
