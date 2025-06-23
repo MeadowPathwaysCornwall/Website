@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: a3b18a;
+  background-color: #a3b18a;
   background-image: url('BG.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0 0 32px 0;
-  background: 588157;
+  background: #588157;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -31,13 +31,13 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 .nav-tabs a:hover, .nav-tabs .active {
-  background: #7ee2aa;
-  color: #165684;
+  background: #588157;
+  color: #a3b18a;
 }
 
 /* Main content section and info boxes */
 section, .main-content-box, .contact-info, .policy-tabs-container {
-  background: a3b18a !important;
+  background: #588157 !important;
   max-width: 900px;
   margin: 40px auto;
   padding: 30px;
@@ -111,7 +111,7 @@ img {
   margin-right: auto;
 }
 
-/* MP.JPG styling for responsiveness */
+/* MP.jpg styling for responsiveness */
 .mp-img {
   max-width: 200px;
   width: 50%;
@@ -120,7 +120,15 @@ img {
   margin: 0 auto;
   border-radius: 12px;
 }
-
+/* ZW.jpg styling for responsiveness */
+.zw-img {
+  max-width: 200px;
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
 /* Policy tabs section (Safeguarding Page) */
 .policy-tabs-container {
   margin: 30px auto;
