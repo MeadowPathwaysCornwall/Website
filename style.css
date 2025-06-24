@@ -122,18 +122,6 @@ img {
   height: auto;
   display: block;
 }
-
-/* MP.jpg and ZW.jpg styling: smaller and centered */
-.mp-img, .zw-img {
-  max-width: 400px;
-  width: 200px;
-  height: auto;
-  display: block;
-  margin: 25px auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-
 /* Safeguarding images */
 .safeguarding-images {
   display: flex;
