@@ -1,39 +1,16 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #588157;
-  background-image: url('BG.png');
-  background-repeat: repeat-y;
-  background-size: contain;
-  background-position: top center;
+  background: #588157;
   color: #fff;
   min-height: 100vh;
 }
 
 body.contact-bg {
-  background-image: url('contact1.png') !important;
-  background-size: cover;
+  background-image: url('contact1.png');
   background-repeat: no-repeat;
-  background-position: center center;
-}
-
-body.staff-bg {
-  background-image: url('Staff.png') !important;
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
-}
-
-body.safeguarding-bg {
-  background-image: url('safeguarding-background.png') !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-*, *::before, *::after {
-  color: #fff !important;
-  box-sizing: border-box;
 }
 
 .logo-container {
@@ -41,20 +18,18 @@ body.safeguarding-bg {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-  width: 100%;
 }
 
 .logo {
-  max-width: 180px;
+  max-width: 160px;
   height: auto;
   display: block;
 }
 
 @media (max-width: 600px) {
-  .logo { max-width: 100px; }
+  .logo { max-width: 90px; }
 }
 
-/* Navigation tabs */
 .nav-tabs {
   display: flex;
   justify-content: center;
@@ -79,29 +54,18 @@ body.safeguarding-bg {
   color: #fff !important;
 }
 
-/* Main content section and info boxes */
-section, .main-content-box, .contact-info, .policy-tabs-container {
-  background: #588157 !important;
-  max-width: 900px;
+/* Main content box */
+.main-content-box {
+  background: rgba(88, 129, 87, 0.98);
+  max-width: 600px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(40,60,60,0.10);
-  color: #fff !important;
+  color: #fff;
 }
 
-/* Contact Info Bigger */
-.contact-info {
-  max-width: 1200px;
-  padding: 48px;
-  background: #588157 !important;
-  margin: 40px auto;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(40,60,60,0.10);
-  color: #fff !important;
-}
-
-/* Auto-expanding textarea/message box in the contact form */
+/* Responsive form styles */
 .contact-form textarea {
   min-height: 40px;
   width: 80%;
@@ -114,72 +78,17 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   transition: min-height 0.2s;
 }
 
-/* Phone icon and hover tab styling */
-.phone-tooltip-container {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
-  vertical-align: middle;
-}
-.phone-icon {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #a3b18a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.2s, background 0.2s;
-  box-shadow: 0 2px 8px rgba(40,60,60,0.12);
-  font-size: 1.7rem;
-  overflow: hidden;
-}
-.phone-icon:hover, .phone-icon:focus {
-  box-shadow: 0 4px 24px rgba(40,60,60,0.18);
-  background: #588157;
-}
-.phone-tooltip-tab {
-  display: none;
-  position: absolute;
-  top: 120%; left: 50%;
-  transform: translateX(-50%);
-  background: #588157;
-  color: #fff;
-  padding: 20px 28px;
-  border-radius: 16px;
-  box-shadow: 0 2px 18px rgba(40,60,60,0.18);
-  min-width: 220px;
-  z-index: 99;
-  text-align: left;
-  font-size: 1.05rem;
-  white-space: pre-line;
-}
-.phone-tooltip-container:hover .phone-tooltip-tab,
-.phone-tooltip-container:focus-within .phone-tooltip-tab {
-  display: block;
-}
-.phone-tooltip-tab strong {
-  color: #fff;
-}
-@media (hover: none) and (pointer: coarse) {
-  .phone-tooltip-tab {
-    top: 140%;
-  }
-}
-
 /* Footer styling */
 footer {
   text-align: center;
   margin: 24px 0 8px 0;
-  color: #fff !important;
+  color: #fff;
   font-size: 1rem;
   background: transparent;
   font-weight: bold;
   letter-spacing: 0.01em;
 }
 
-/* All images responsive */
 img {
   max-width: 100%;
   height: auto;
