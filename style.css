@@ -10,6 +10,14 @@ body {
   min-height: 100vh;
 }
 
+/* Contact page background override */
+body.contact-bg {
+  background-image: url('contact1.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 /* Make ALL text white by default */
 *, *::before, *::after {
   color: #fff !important;
@@ -65,7 +73,7 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
 
 /* Make the textarea/message box in the contact form bigger */
 .contact-form textarea {
-  min-height: 260px;
+  min-height: 180px;
   width: 100%;
   font-size: 1.1rem;
   padding: 12px;
