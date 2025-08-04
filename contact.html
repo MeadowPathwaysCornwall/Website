@@ -5,6 +5,61 @@
   <title>Contact Us | Meadow Pathways Cornwall</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Phone icon and hover tab styling */
+    .phone-tooltip-container {
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: middle;
+    }
+    .phone-icon {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 50%;
+      background: #a3b18a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(40,60,60,0.12);
+      font-size: 1.7rem;
+    }
+    .phone-icon:hover {
+      box-shadow: 0 4px 24px rgba(40,60,60,0.18);
+      background: #588157;
+    }
+    .phone-tooltip-tab {
+      display: none;
+      position: absolute;
+      top: 120%; left: 50%;
+      transform: translateX(-50%);
+      background: #588157;
+      color: #fff;
+      padding: 20px 28px;
+      border-radius: 16px;
+      box-shadow: 0 2px 18px rgba(40,60,60,0.18);
+      min-width: 220px;
+      z-index: 99;
+      text-align: left;
+      font-size: 1.05rem;
+      white-space: pre-line;
+    }
+    .phone-tooltip-container:hover .phone-tooltip-tab,
+    .phone-tooltip-container:focus-within .phone-tooltip-tab {
+      display: block;
+    }
+    .phone-tooltip-tab strong {
+      color: #fff;
+    }
+    /* Optional: on mobile, always show tab below icon when tapped */
+    @media (hover: none) and (pointer: coarse) {
+      .phone-tooltip-tab {
+        top: 140%;
+      }
+    }
+  </style>
 </head>
 <body class="contact-bg">
   <div class="logo-container">
@@ -22,6 +77,23 @@
 
   <section class="main-content-box">
     <h1>Contact Us</h1>
+
+    <p>
+      For direct enquiries, hover over the phone icon:
+      <span class="phone-tooltip-container">
+        <span class="phone-icon" tabindex="0" aria-label="Contact details">&#128222;</span>
+        <span class="phone-tooltip-tab">
+<strong>Michelle (Director):</strong>
+📞 01234 567890<br>
+✉️ michelle@meadowpathways.co.uk
+
+<strong>Zoe (Director):</strong>
+📞 09876 543210<br>
+✉️ zoe@meadowpathways.co.uk
+        </span>
+      </span>
+    </p>
+
     <form class="contact-form" action="mailto:info@meadowpathways.co.uk" method="POST" enctype="text/plain">
       <label for="name">Your Name:</label><br>
       <input type="text" id="name" name="name" required style="width:80%;padding:10px;border-radius:8px;margin-bottom:12px;"><br>
