@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 16px;
+      vertical-align: middle;
+      float: left;
+    }
+    .about-person-header {
+      overflow: auto;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 600px) {
+      .profile-pic {
+        width: 56px;
+        height: 56px;
+        margin-right: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="logo-container">
@@ -24,8 +46,10 @@
     <div class="team-flex">
       <div class="team-member-about">
         <div class="text">
-          <h2>Michelle Pascoe</h2>
-          <img src="MP.jpeg" alt="Michelle Pascoe" class="profile-pic">
+          <div class="about-person-header">
+            <img src="MP.jpeg" alt="Michelle Pascoe" class="profile-pic">
+            <h2 style="display:inline-block; vertical-align:middle; margin:0;">Michelle Pascoe</h2>
+          </div>
           <p>
             Michelle leads the therapeutic provision, delivering therapies, taking a lead on safeguarding, compliance and staff supervision. She supports the wellbeing of all students and works closely with the director of education to integrate therapeutic and educational approaches. She supports the wellbeing of all students and works closely with the Headteacher to integrate therapeutic and educational approaches.
           </p>
@@ -41,8 +65,10 @@
       </div>
       <div class="team-member-about">
         <div class="text">
-          <h2>Zoe Waitz</h2>
-          <img src="Zoe.jpeg" alt="Zoe Waitz" class="profile-pic">
+          <div class="about-person-header">
+            <img src="Zoe.jpeg" alt="Zoe Waitz" class="profile-pic">
+            <h2 style="display:inline-block; vertical-align:middle; margin:0;">Zoe Waitz</h2>
+          </div>
           <p>
             Zoe brings years of experience in education and Forest School/outdoor education interventions. She is passionate about helping young people reach their potential and is committed to safeguarding and inclusive practice.
           </p>
