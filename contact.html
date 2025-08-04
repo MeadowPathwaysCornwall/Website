@@ -2,55 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Meadow Pathways Cornwall</title>
+  <title>Contact Us | Meadow Pathways Cornwall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body.contact-bg {
-      background-image: url('contact.html');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-  </style>
 </head>
 <body class="contact-bg">
   <div class="logo-container">
-    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo" style="width: 200px; height: auto;">
+    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo">
   </div>
 
   <ul class="nav-tabs">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="eotas.html">EOTAS Info</a></li>
-  <li><a href="about.html">About Us</a></li>
-  <li><a href="safeguarding.html">Safeguarding</a></li>
-  <li><a href="contact.html">Contact Us</a></li>
-  <li><a href="staff.html">Staff Only</a></li>
-</ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="eotas.html">EOTAS Info</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="safeguarding.html">Safeguarding</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+    <li><a href="staff.html">Staff Only</a></li>
+  </ul>
 
-  <section class="contact-info">
+  <section class="main-content-box">
     <h1>Contact Us</h1>
-    <p>
-      <strong>Email:</strong> <a href="mailto:meadowpathwayscornwall@outlook.com">meadowpathwayscornwall@outlook.com</a><br>
-      <strong>Main Contact:</strong> Education Director - Zoe Waitz M:07775733587 Email:meadowpathwayscornwall@outlook.com 
-      Theraputic Director Michelle Pascoe M:07932243358 Email:meadowpathwayscornwall@outlook.com <br>
-    </p>
-    <form class="contact-form" action="mailto:meadowpathwayscornwall@outlook.com" method="POST" enctype="text/plain">
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="Name" required>
-
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="Email" required>
-
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="Message" rows="8" required></textarea>
-
-      <button type="submit">Send Message</button>
+    <form class="contact-form" action="mailto:info@meadowpathways.co.uk" method="POST" enctype="text/plain">
+      <label for="name">Your Name:</label><br>
+      <input type="text" id="name" name="name" required style="width:80%;padding:10px;border-radius:8px;margin-bottom:12px;"><br>
+      <label for="email">Your Email:</label><br>
+      <input type="email" id="email" name="email" required style="width:80%;padding:10px;border-radius:8px;margin-bottom:12px;"><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea><br><br>
+      <button type="submit" style="padding:12px 36px;border-radius:8px;background:#a3b18a;color:#fff;font-weight:bold;border:none;font-size:1.1rem;">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.</p>
+    © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
   </footer>
+
+  <script>
+  // Auto-expanding textarea
+  document.addEventListener('DOMContentLoaded', function() {
+    var textarea = document.querySelector('.contact-form textarea');
+    if (textarea) {
+      textarea.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+      });
+      textarea.dispatchEvent(new Event('input'));
+    }
+  });
+  </script>
 </body>
 </html>
