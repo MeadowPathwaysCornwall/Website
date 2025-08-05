@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us | Meadow Pathways Cornwall</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="contact-bg">
   <div class="logo-container">
     <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo">
   </div>
+
   <ul class="nav-tabs">
     <li><a href="index.html">Home</a></li>
     <li><a href="eotas.html">EOTAS Info</a></li>
@@ -18,48 +19,26 @@
     <li><a href="contact.html" class="active">Contact Us</a></li>
     <li><a href="staff.html">Staff Only</a></li>
   </ul>
+
   <section class="main-content-box">
     <h1>Contact Us</h1>
-    <p>
-      For direct enquiries, hover over the phone icon:
-      <span class="phone-tooltip-container">
-        <span class="phone-icon" tabindex="0" aria-label="Contact details">&#128222;</span>
-        <span class="phone-tooltip-tab">
-<strong>Michelle (Director):</strong><br>
-📞 07932243358<br>
-✉️ meadowpathwayscornwall@outlook.com
+    <p>Feel free to contact us using the form below or by phone/email.</p>
+    <form class="contact-form">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br><br>
 
-<strong>Zoe (Director):</strong><br>
-📞 07775733587<br>
-✉️ meadowpathwayscornwall@outlook.com
-        </span>
-      </span>
-    </p>
-    <form class="contact-form" action="mailto:info@meadowpathways.co.uk" method="POST" enctype="text/plain">
-      <label for="name">Your Name:</label><br>
-      <input type="text" id="name" name="name" required style="width:80%;padding:10px;border-radius:8px;margin-bottom:12px;"><br>
-      <label for="email">Your Email:</label><br>
-      <input type="email" id="email" name="email" required style="width:80%;padding:10px;border-radius:8px;margin-bottom:12px;"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
       <label for="message">Message:</label><br>
-      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea><br><br>
-      <button type="submit" style="padding:12px 36px;border-radius:8px;background:#a3b18a;color:#fff;font-weight:bold;border:none;font-size:1.1rem;">Send Message</button>
+      <textarea id="message" name="message"></textarea><br><br>
+
+      <input type="submit" value="Send">
     </form>
   </section>
+
   <footer>
     © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
   </footer>
-  <script>
-  // Auto-expanding textarea
-  document.addEventListener('DOMContentLoaded', function() {
-    var textarea = document.querySelector('.contact-form textarea');
-    if (textarea) {
-      textarea.addEventListener('input', function() {
-        this.style.height = 'auto';
-        this.style.height = (this.scrollHeight) + 'px';
-      });
-      textarea.dispatchEvent(new Event('input'));
-    }
-  });
-  </script>
 </body>
 </html>
