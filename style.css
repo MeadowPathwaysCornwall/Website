@@ -13,6 +13,20 @@ body.contact-bg {
   background-position: center center;
 }
 
+body.staff-bg {
+  background-image: url('Staff.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+body.safeguarding-bg {
+  background-image: url('safeguarding-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 .logo-container {
   display: flex;
   justify-content: center;
@@ -54,10 +68,9 @@ body.contact-bg {
   color: #fff !important;
 }
 
-/* Main content box */
 .main-content-box {
   background: rgba(88, 129, 87, 0.98);
-  max-width: 600px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 18px;
@@ -65,7 +78,6 @@ body.contact-bg {
   color: #fff;
 }
 
-/* Responsive form styles */
 .contact-form textarea {
   min-height: 40px;
   width: 80%;
@@ -78,7 +90,6 @@ body.contact-bg {
   transition: min-height 0.2s;
 }
 
-/* Footer styling */
 footer {
   text-align: center;
   margin: 24px 0 8px 0;
@@ -93,4 +104,77 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Phone icon and hover tab styling for Contact page */
+.phone-tooltip-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+.phone-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #a3b18a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(40,60,60,0.12);
+  font-size: 1.7rem;
+  overflow: hidden;
+}
+.phone-icon:hover, .phone-icon:focus {
+  box-shadow: 0 4px 24px rgba(40,60,60,0.18);
+  background: #588157;
+}
+.phone-tooltip-tab {
+  display: none;
+  position: absolute;
+  top: 120%; left: 50%;
+  transform: translateX(-50%);
+  background: #588157;
+  color: #fff;
+  padding: 20px 28px;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(40,60,60,0.18);
+  min-width: 220px;
+  z-index: 99;
+  text-align: left;
+  font-size: 1.05rem;
+  white-space: pre-line;
+}
+.phone-tooltip-container:hover .phone-tooltip-tab,
+.phone-tooltip-container:focus-within .phone-tooltip-tab {
+  display: block;
+}
+.phone-tooltip-tab strong {
+  color: #fff;
+}
+@media (hover: none) and (pointer: coarse) {
+  .phone-tooltip-tab {
+    top: 140%;
+  }
+}
+
+/* Arrow image and banner styling */
+.safeguarding-arrow {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.banner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.banner {
+  max-width: 650px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(60,80,60,0.10);
 }
