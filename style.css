@@ -1,4 +1,28 @@
-/* Staff background (in case it's not already in) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #588157;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Backgrounds per page */
+body.home-bg,
+body.eotas-bg,
+body.about-bg {
+  background-image: url('BG.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+body.contact-bg {
+  background-image: url('contact1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 body.staff-bg {
   background-image: url('Staff.png');
   background-repeat: no-repeat;
@@ -6,7 +30,94 @@ body.staff-bg {
   background-position: center center;
 }
 
-/* Staff page image sizing and layout */
+/* Logo size */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    max-width: 80px;
+  }
+}
+
+/* Navigation tabs */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  background: #a3b18a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.nav-tabs li { margin: 0; }
+.nav-tabs a {
+  display: block;
+  padding: 12px 24px;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-tabs a:hover, .nav-tabs .active {
+  background: #588157;
+  color: #fff !important;
+}
+
+/* Main content container */
+.main-content-box {
+  background: rgba(88, 129, 87, 0.98);
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(40,60,60,0.10);
+  color: #fff;
+}
+
+/* Contact page form */
+.contact-form textarea {
+  min-height: 40px;
+  width: 80%;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 8px;
+  resize: none;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  transition: min-height 0.2s;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 24px 0 8px 0;
+  color: #fff;
+  font-size: 1rem;
+  background: transparent;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+
+/* General image rules */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Staff Tabs */
 .staff-tabs-container {
   display: flex;
   flex-wrap: wrap;
