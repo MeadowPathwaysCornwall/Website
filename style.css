@@ -1,4 +1,6 @@
-/* === Reset and Base Styles === */
+/* style.css */
+
+/* Reset and Base Styles */
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
@@ -8,49 +10,54 @@ body, h1, h2, h3, p, ul, li, a {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #fff;
-  min-height: 100vh;
-  background-color: #588157;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  color: #333;
 }
 
-/* Background images per page */
-body.bg, body.about, body.eotas {
+/* Backgrounds for pages */
+body.home, body.about, body.eotas {
   background-image: url('BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-body.staff-bg {
+body.staff {
   background-image: url('Staff.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-body.contact-bg {
+body.contact {
   background-image: url('contact1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* Container for centered logo */
+/* Logo */
 .logo-container {
   text-align: center;
-  margin: 20px 0;
+  padding: 10px;
 }
 
 .logo {
   max-width: 150px;
   height: auto;
-  display: inline-block;
 }
 
-/* Navigation tabs */
+/* Navigation */
 .nav-tabs {
   list-style: none;
   display: flex;
   justify-content: center;
-  background: #a3b18a;
-  border-radius: 8px;
-  padding: 10px 0;
-  margin: 0 0 30px 0;
   flex-wrap: wrap;
+  background-color: #588157; /* soft green */
+  padding: 10px 0;
+  margin-bottom: 20px;
 }
 
 .nav-tabs li {
@@ -58,183 +65,206 @@ body.contact-bg {
 }
 
 .nav-tabs a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
   padding: 8px 16px;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.nav-tabs a.active,
-.nav-tabs a:hover {
-  background-color: #588157;
+.nav-tabs a:hover,
+.nav-tabs a.active {
+  background-color: #a3b18a; /* lighter green */
 }
 
-/* Main content boxes */
-.main-content-box,
-section {
+/* Main Content Box */
+.main-content-box, section {
   max-width: 1000px;
   margin: 0 auto 40px auto;
-  background-color: rgba(88, 129, 87, 0.9);
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(40, 60, 60, 0.2);
+  padding: 20px 25px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(40, 60, 60, 0.1);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #3a4a27;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 20px 0 10px 0;
+  color: #588157;
+}
+
+/* Paragraph and list styles */
+p {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* Links */
+a {
+  color: #588157;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #3a4a27;
+}
+
+/* Banner image for home page */
+.banner-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.banner {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(40,60,60,0.15);
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* Staff photos for About Us */
+.staff-photos {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.staff-photo {
+  width: 2cm;
+  height: 2cm;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #a3b18a;
+  box-shadow: 0 2px 8px rgba(88,129,87,0.6);
+}
+
+/* Arrow small */
+.safeguarding-arrow {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Safeguarding images */
+.safeguarding-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 15px 0 25px 0;
+  flex-wrap: wrap;
+}
+
+.safeguarding-img {
+  max-width: 250px;
+  max-height: 180px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Staff Page Styling */
+.staff-tabs-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.staff-tab {
+  background-color: rgba(88,129,87,0.95);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(40,60,60,0.1);
+  padding: 20px 15px;
+  width: 220px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.staff-tab:hover {
+  box-shadow: 0 6px 22px rgba(30,45,60,0.22);
+  transform: scale(1.04);
+}
+
+.staff-tab img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  background: white;
+  object-fit: contain;
+}
+
+.staff-tab-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
   color: #fff;
+}
+
+.staff-tab-link {
+  color: #d3e1cd;
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+.staff-tab-link:hover {
+  color: #e7f0d9;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: transparent;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-/* Banner on home page */
-.banner-container {
-  text-align: center;
-  margin: 30px 0 0 0;
-}
-
-.banner {
-  max-width: 400px;
-  width: 90%;
-  height: auto;
-  border-radius: 12px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-/* Staff photos on About page */
-.staff-photo-inline {
-  width: 2cm;
-  height: 2cm;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  float: left;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-
-/* Safeguarding arrow small */
-.safeguarding-arrow {
-  width: 40px;
-  height: 40px;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-/* Book icon small next to title */
-.book-icon-small {
-  width: 24px;
-  height: auto;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-/* Staff page tabs */
-.staff-tabs-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.staff-tab {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 20px;
-  width: 240px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  color: #fff;
-}
-
-.staff-tab img {
-  width: 3cm;
-  height: auto;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
-
-.staff-tab-title {
-  font-weight: bold;
-  font-size: 1.15rem;
-  margin-bottom: 8px;
-}
-
-.staff-tab-link {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: normal;
-}
-
-.staff-tab-link:hover {
-  color: #a3b18a;
-}
-
-/* Policy tabs with background */
-.policy-tabs-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+  background-color: #588157;
+  color: white;
   margin-top: 30px;
-  padding: 30px;
-  background-image: url('IMG_3303.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
 }
 
-.policy-image-tab {
-  position: relative;
-  display: block;
-  width: 180px;
-  height: 120px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  transition: transform 0.3s ease;
-  background-color: rgba(0,0,0,0.25);
-}
-
-.policy-image-tab img.policy-tab-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.85;
-}
-
-.policy-tab-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 6px 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-}
-
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 768px) {
+  .nav-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
   .staff-tabs-container {
     flex-direction: column;
     align-items: center;
   }
-
-  .policy-tabs-container {
+  .staff-photos {
     flex-direction: column;
     align-items: center;
+  }
+  .safeguarding-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner {
+    max-height: 200px;
   }
 }
