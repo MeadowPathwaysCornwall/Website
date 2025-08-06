@@ -20,6 +20,20 @@
   <div class="logo-container">
     <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo" />
   </div>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var textarea = document.querySelector('.contact-form textarea');
+  if (textarea) {
+    // Function to auto-resize the textarea
+    textarea.addEventListener('input', function() {
+      this.style.height = 'auto'; // reset height
+      this.style.height = (this.scrollHeight) + 'px';
+    });
+    // Optionally, trigger resize on load if pre-filled
+    textarea.dispatchEvent(new Event('input'));
+  }
+});
+</script>
 
   <ul class="nav-tabs">
     <li><a href="index.html">Home</a></li>
