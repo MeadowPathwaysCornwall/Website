@@ -87,6 +87,20 @@ body.staff-bg {
   resize: vertical;
   box-sizing: border-box;
 }
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var textarea = document.querySelector('.contact-form textarea');
+  if (textarea) {
+    // Function to auto-resize the textarea
+    textarea.addEventListener('input', function() {
+      this.style.height = 'auto'; // reset height
+      this.style.height = (this.scrollHeight) + 'px';
+    });
+    // Optionally, trigger resize on load if pre-filled
+    textarea.dispatchEvent(new Event('input'));
+  }
+});
+</script>
 
 /* Banner styling - home page only */
 .banner-container {
