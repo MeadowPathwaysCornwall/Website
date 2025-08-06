@@ -188,6 +188,11 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Hide Book Image */
+.book-img {
+  display: none;
+}
+
 /* Contact Info Layout */
 .contact-info {
   background-color: rgba(255, 255, 255, 0.9);
@@ -199,21 +204,46 @@ footer {
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-content: center;
+}
+
+.phone-tooltip-container {
+  position: relative;
+  display: inline-block;
 }
 
 .phone-icon {
-  font-size: 2rem;
-  color: red;
-  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
 }
 
-.phone-text a {
-  color: #0066cc;
-  text-decoration: none;
+.phone-tooltip-tab {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #588157;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+  white-space: pre-line;
+  z-index: 100;
+  min-width: 180px;
 }
 
-.phone-text a:hover {
-  text-decoration: underline;
+.phone-tooltip-container:hover .phone-tooltip-tab {
+  display: block;
 }
 
 /* Contact Form Styling */
