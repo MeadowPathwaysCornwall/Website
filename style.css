@@ -101,6 +101,26 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+  .phone-icon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #a3b18a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(40,60,60,0.12);
+  font-size: 1.7rem;
+  overflow: hidden;
+}
+
+.phone-icon img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
 
 /* Banner styling - home page only */
 .banner-container {
