@@ -18,3 +18,40 @@
   height: 28px;
   display: block;
 }
+<div class="main-content-box">
+  <h1>Contact Us</h1>
+
+  <div class="contact-person">
+    <div class="phone-icon" title="Contact Zoe">
+      <img src="red-phone-icon.png" alt="Phone Icon" />
+    </div>
+    <div class="contact-details" style="display:none;">
+      <strong>Zoe Waitz</strong><br />
+      Phone: 01234 567890<br />
+      Email: zoe@example.com
+    </div>
+  </div>
+
+  <div class="contact-person">
+    <div class="phone-icon" title="Contact Michelle">
+      <img src="red-phone-icon.png" alt="Phone Icon" />
+    </div>
+    <div class="contact-details" style="display:none;">
+      <strong>Michelle Pascoe</strong><br />
+      Phone: 09876 543210<br />
+      Email: michelle@example.com
+    </div>
+  </div>
+</div>
+
+<script>
+  // Simple hover toggle for contact details
+  document.querySelectorAll('.phone-icon').forEach(function(icon) {
+    icon.addEventListener('mouseenter', function() {
+      this.nextElementSibling.style.display = 'block';
+    });
+    icon.addEventListener('mouseleave', function() {
+      this.nextElementSibling.style.display = 'none';
+    });
+  });
+</script>
