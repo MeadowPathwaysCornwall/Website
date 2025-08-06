@@ -70,6 +70,12 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
   box-shadow: 0 2px 12px rgba(40,60,60,0.10);
   color: #fff !important;
 }
+body.staff-bg {
+  background-image: url('Staff.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
 /* Make the textarea/message box in the contact form bigger */
 .contact-form textarea {
