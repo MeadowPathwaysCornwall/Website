@@ -10,9 +10,17 @@ body {
   min-height: 100vh;
 }
 
-/* Contact page background override */
+/* Background override for contact page */
 body.contact-bg {
   background-image: url('contact1.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Background override for staff page */
+body.staff-bg {
+  background-image: url('Staff.png') !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -35,7 +43,11 @@ body.contact-bg {
   border-radius: 8px;
   overflow: hidden;
 }
-.nav-tabs li { margin: 0; }
+
+.nav-tabs li {
+  margin: 0;
+}
+
 .nav-tabs a {
   display: block;
   padding: 12px 24px;
@@ -44,19 +56,24 @@ body.contact-bg {
   font-weight: bold;
   transition: background 0.2s, color 0.2s;
 }
-.nav-tabs a:hover, .nav-tabs .active {
+
+.nav-tabs a:hover,
+.nav-tabs .active {
   background: #588157;
   color: #fff !important;
 }
 
 /* Main content section and info boxes */
-section, .main-content-box, .contact-info, .policy-tabs-container {
+section,
+.main-content-box,
+.contact-info,
+.policy-tabs-container {
   background: #588157 !important;
   max-width: 900px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(40,60,60,0.10);
+  box-shadow: 0 2px 12px rgba(40, 60, 60, 0.10);
   color: #fff !important;
 }
 
@@ -64,20 +81,13 @@ section, .main-content-box, .contact-info, .policy-tabs-container {
 .contact-info {
   max-width: 1200px;
   padding: 48px;
-  background: #588157 !important;
   margin: 40px auto;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(40,60,60,0.10);
+  box-shadow: 0 2px 12px rgba(40, 60, 60, 0.10);
   color: #fff !important;
 }
-body.staff-bg {
-  background-image: url('Staff.png') !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
-/* Make the textarea/message box in the contact form bigger */
+/* Contact form textarea styling */
 .contact-form textarea {
   min-height: 180px;
   width: 100%;
@@ -87,21 +97,9 @@ body.staff-bg {
   resize: vertical;
   box-sizing: border-box;
 }
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var textarea = document.querySelector('.contact-form textarea');
-  if (textarea) {
-    // Function to auto-resize the textarea
-    textarea.addEventListener('input', function() {
-      this.style.height = 'auto'; // reset height
-      this.style.height = (this.scrollHeight) + 'px';
-    });
-    // Optionally, trigger resize on load if pre-filled
-    textarea.dispatchEvent(new Event('input'));
-  }
-});
-</script>
-  .phone-icon {
+
+/* Phone icon */
+.phone-icon {
   width: 60px;
   height: 60px;
   cursor: pointer;
@@ -111,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(40,60,60,0.12);
+  box-shadow: 0 2px 8px rgba(40, 60, 60, 0.12);
   font-size: 1.7rem;
   overflow: hidden;
 }
@@ -122,11 +120,12 @@ document.addEventListener('DOMContentLoaded', function() {
   display: block;
 }
 
-/* Banner styling - home page only */
+/* Banner styling */
 .banner-container {
   text-align: center;
   margin: 30px 0 0 0;
 }
+
 .banner {
   max-width: 400px;
   width: 100%;
@@ -136,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
   margin-right: auto;
 }
 
-/* Logo styling - always centered */
+/* Logo styling */
 .logo-container {
   display: flex;
   justify-content: center;
@@ -144,16 +143,20 @@ document.addEventListener('DOMContentLoaded', function() {
   margin: 20px 0;
   width: 100%;
 }
+
 .logo {
-  width: 400px;
+  width: 300px;
   height: auto;
   display: block;
 }
+
 @media (max-width: 600px) {
-  .logo { width: 120px; }
+  .logo {
+    width: 120px;
+  }
 }
 
-/* Footer styling */
+/* Footer */
 footer {
   text-align: center;
   margin: 24px 0 8px 0;
@@ -170,6 +173,7 @@ img {
   height: auto;
   display: block;
 }
+
 /* Safeguarding images */
 .safeguarding-images {
   display: flex;
@@ -179,9 +183,10 @@ img {
   justify-content: center;
   margin-bottom: 28px;
 }
+
 .safeguarding-img {
   max-width: 400px;
-  width: 150%;
+  width: 100%;
   border-radius: 14px;
   margin-left: auto;
   margin-right: auto;
@@ -199,6 +204,7 @@ img {
   padding: 24px;
   border-radius: 18px;
 }
+
 .policy-image-tab {
   position: relative;
   display: block;
@@ -213,19 +219,22 @@ img {
   margin: 0 auto;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .policy-image-tab:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 24px rgba(30,45,60,0.21);
+  box-shadow: 0 6px 24px rgba(30, 45, 60, 0.21);
 }
+
 .policy-tab-text {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: #fff !important;
   font-weight: bold;
   font-size: 1.18rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
-  background: rgba(0,0,0,0.32);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.32);
   padding: 22px 18px;
   border-radius: 11px;
   text-align: center;
@@ -241,6 +250,7 @@ img {
   margin-right: 10px;
   transition: transform 0.15s;
 }
+
 a:hover .section-arrow {
   transform: scale(1.1);
 }
@@ -252,9 +262,33 @@ a:hover .section-arrow {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 800px) {
-  .safeguarding-images { flex-direction: column; gap: 20px; }
+  .safeguarding-images {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
+
 @media (max-width: 350px) {
-  section, .policy-tabs-container, .main-content-box, .contact-info { padding: 10px; }
-  .safeguarding-img, .mp-img, .zw-img, .banner { max-width: 100%; }
+  section,
+  .policy-tabs-container,
+  .main-content-box,
+  .contact-info {
+    padding: 10px;
+  }
+
+  .safeguarding-img,
+  .mp-img,
+  .zw-img,
+  .banner {
+    max-width: 100%;
+  }
+}
+
+/* Book image inside staff tabs */
+.book-img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
 }
