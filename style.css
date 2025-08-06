@@ -1,53 +1,27 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #588157;
+  background-color: #588157;
+  background-image: url('BG.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: top center;
   color: #fff;
   min-height: 100vh;
 }
 
-/* Backgrounds per page */
-body.home-bg,
-body.eotas-bg,
-body.about-bg {
-  background-image: url('BG.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
+/* Contact page background override */
 body.contact-bg {
-  background-image: url('contact1.png');
-  background-repeat: no-repeat;
+  background-image: url('contact1.png') !important;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
 }
 
-body.staff-bg {
-  background-image: url('Staff.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-/* Logo size */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.logo {
-  max-width: 120px;
-  height: auto;
-  display: block;
-}
-
-@media (max-width: 600px) {
-  .logo {
-    max-width: 80px;
-  }
+/* Make ALL text white by default */
+*, *::before, *::after {
+  color: #fff !important;
+  box-sizing: border-box;
 }
 
 /* Navigation tabs */
@@ -75,91 +49,172 @@ body.staff-bg {
   color: #fff !important;
 }
 
-/* Main content container */
-.main-content-box {
-  background: rgba(88, 129, 87, 0.98);
+/* Main content section and info boxes */
+section, .main-content-box, .contact-info, .policy-tabs-container {
+  background: #588157 !important;
   max-width: 900px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(40,60,60,0.10);
-  color: #fff;
+  color: #fff !important;
 }
 
-/* Contact page form */
+/* Contact Info Bigger */
+.contact-info {
+  max-width: 1200px;
+  padding: 48px;
+  background: #588157 !important;
+  margin: 40px auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(40,60,60,0.10);
+  color: #fff !important;
+}
+
+/* Make the textarea/message box in the contact form bigger */
 .contact-form textarea {
-  min-height: 40px;
-  width: 80%;
+  min-height: 180px;
+  width: 100%;
   font-size: 1.1rem;
   padding: 12px;
   border-radius: 8px;
-  resize: none;
+  resize: vertical;
   box-sizing: border-box;
-  overflow-y: hidden;
-  transition: min-height 0.2s;
 }
 
-/* Footer */
+/* Banner styling - home page only */
+.banner-container {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+.banner {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Logo styling - always centered */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+}
+.logo {
+  width: 400px;
+  height: auto;
+  display: block;
+}
+@media (max-width: 600px) {
+  .logo { width: 120px; }
+}
+
+/* Footer styling */
 footer {
   text-align: center;
   margin: 24px 0 8px 0;
-  color: #fff;
+  color: #fff !important;
   font-size: 1rem;
   background: transparent;
   font-weight: bold;
   letter-spacing: 0.01em;
 }
 
-/* General image rules */
+/* All images responsive */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
-/* Staff Tabs */
-.staff-tabs-container {
+/* Safeguarding images */
+.safeguarding-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 50px;
+  align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-bottom: 28px;
+}
+.safeguarding-img {
+  max-width: 400px;
+  width: 150%;
+  border-radius: 14px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.staff-tab {
-  background: rgba(88, 129, 87, 0.95);
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 250px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  color: #fff;
+/* Policy tabs section (Safeguarding Page) */
+.policy-tabs-container {
+  margin: 30px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: #588157 !important;
+  padding: 24px;
+  border-radius: 18px;
 }
-
-.staff-tab img {
-  max-width: 120px;
-  height: auto;
-  margin-bottom: 12px;
-}
-
-.staff-tab-title {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.staff-tab-link {
-  display: inline-block;
-  margin-top: 8px;
-  background: #a3b18a;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 8px;
+.policy-image-tab {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: 120px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: url('IMG_3303.jpg') center center/cover no-repeat;
+  box-shadow: 0 4px 18px rgba(34, 64, 102, 0.14);
   text-decoration: none;
+  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.policy-image-tab:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 24px rgba(30,45,60,0.21);
+}
+.policy-tab-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff !important;
   font-weight: bold;
-  transition: background 0.3s;
+  font-size: 1.18rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.32);
+  padding: 22px 18px;
+  border-radius: 11px;
+  text-align: center;
+  width: 88%;
+  box-sizing: border-box;
 }
 
-.staff-tab-link:hover {
-  background: #588157;
+/* Arrow icon for section headings */
+.section-arrow {
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  transition: transform 0.15s;
+}
+a:hover .section-arrow {
+  transform: scale(1.1);
+}
+
+.safeguarding-arrow {
+  width: 80px;
+  height: 80px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 800px) {
+  .safeguarding-images { flex-direction: column; gap: 20px; }
+}
+@media (max-width: 350px) {
+  section, .policy-tabs-container, .main-content-box, .contact-info { padding: 10px; }
+  .safeguarding-img, .mp-img, .zw-img, .banner { max-width: 100%; }
 }
