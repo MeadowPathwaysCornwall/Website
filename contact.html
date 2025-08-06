@@ -1,111 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us | Meadow Pathways Cornwall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Phone icon styles (from your provided code) */
-    .phone-tooltip-container {
-      position: relative;
-      display: inline-block;
-      margin-left: 20px;
-      vertical-align: middle;
-    }
-    .phone-icon {
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      border-radius: 50%;
-      background: #a3b18a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: box-shadow 0.2s, background 0.2s;
-      box-shadow: 0 2px 8px rgba(40,60,60,0.12);
-      font-size: 1.7rem;
-      overflow: hidden;
-    }
-    .phone-icon:hover, .phone-icon:focus {
-      box-shadow: 0 4px 24px rgba(40,60,60,0.18);
-      background: #588157;
-    }
-    .phone-tooltip-tab {
-      display: none;
-      position: absolute;
-      top: 120%; left: 50%;
-      transform: translateX(-50%);
-      background: #588157;
-      color: #fff;
-      padding: 20px 28px;
-      border-radius: 16px;
-      box-shadow: 0 2px 18px rgba(40,60,60,0.18);
-      min-width: 220px;
-      z-index: 99;
-      text-align: left;
-      font-size: 1.05rem;
-      white-space: pre-line;
-    }
-    .phone-tooltip-container:hover .phone-tooltip-tab,
-    .phone-tooltip-container:focus-within .phone-tooltip-tab {
-      display: block;
-    }
-    .phone-tooltip-tab strong {
-      color: #fff;
-    }
-    @media (hover: none) and (pointer: coarse) {
-      .phone-tooltip-tab {
-        top: 140%;
-      }
-    }
-  </style>
 </head>
 <body class="contact">
+
   <div class="logo-container">
-    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo" />
+    <img src="MP.jpg" alt="Meadow Pathways Logo" class="logo" />
   </div>
 
   <ul class="nav-tabs">
     <li><a href="index.html">Home</a></li>
-    <li><a href="eotas.html">EOTAS Info</a></li>
     <li><a href="about.html">About Us</a></li>
+    <li><a href="eotas.html">EOTAS</a></li>
+    <li><a href="staff.html">Staff</a></li>
     <li><a href="safeguarding.html">Safeguarding</a></li>
-    <li><a href="contact.html" class="active">Contact Us</a></li>
-    <li><a href="staff.html">Staff Only</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
 
-  <section class="main-content-box">
-    <h1>Contact Us</h1>
-    <p>
-      We welcome your enquiries. Please reach out to us via email or phone.
-    </p>
-
-    <h2>Zoe Waitz</h2>
-    <div class="phone-tooltip-container" tabindex="0" aria-label="Contact details for Zoe Waitz">
-      <div class="phone-icon" role="button" aria-pressed="false" tabindex="0" aria-describedby="zoe-contact">
-        📞
-      </div>
-      <div class="phone-tooltip-tab" id="zoe-contact">
-        <strong>Phone:</strong> 01234 567890<br />
-        <strong>Email:</strong> <a href="mailto:zoe@example.com" style="color:#fff; text-decoration: underline;">zoe@example.com</a>
-      </div>
+  <!-- Contact Info with red phone icon -->
+  <div class="contact-info">
+    <div class="phone-icon">📞</div>
+    <div class="phone-text">
+      <strong>Zoe Waitz:</strong> <a href="tel:+447123456789">07123 456789</a><br>
+      <strong>Michelle Pascoe:</strong> <a href="tel:+447987654321">07987 654321</a>
     </div>
+  </div>
 
-    <h2>Michelle Pascoe</h2>
-    <div class="phone-tooltip-container" tabindex="0" aria-label="Contact details for Michelle Pascoe">
-      <div class="phone-icon" role="button" aria-pressed="false" tabindex="0" aria-describedby="michelle-contact">
-        📞
-      </div>
-      <div class="phone-tooltip-tab" id="michelle-contact">
-        <strong>Phone:</strong> 09876 543210<br />
-        <strong>Email:</strong> <a href="mailto:michelle@example.com" style="color:#fff; text-decoration: underline;">michelle@example.com</a>
-      </div>
-    </div>
-  </section>
+  <!-- Contact Form -->
+  <form class="contact-form" action="mailtomeadowpathwayscornwall@outlook.com" method="POST" enctype="text/plain">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
 
   <footer>
-    © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
+    Meadow Pathways Well Being and Education Cornwall Ltd @ 2025
   </footer>
+
 </body>
 </html>
