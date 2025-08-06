@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Meadow Pathways Cornwall</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Contact Us - Meadow Pathways</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="contact">
-
   <div class="logo-container">
-    <img src="Logo.png" alt="Meadow Pathways Logo" class="logo" />
+    <img src="Logo.png" alt="Meadow Pathways Logo" class="logo">
   </div>
 
   <ul class="nav-tabs">
     <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
     <li><a href="eotas.html">EOTAS</a></li>
-    <li><a href="staff.html">Staff</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="safeguarding.html">Safeguarding</a></li>
+    <li><a href="staff.html">Staff Only</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
-  </div>
-</div>
-  <!-- Contact Form -->
-  <form class="contact-form" action="mailtomeadowpathwayscornwall@outlook.com" method="POST" enctype="text/plain">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required />
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required />
+  <div class="main-content-box">
+    <h1 style="text-align: center;">Contact Us</h1>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+    <div class="contact-info">
+      <!-- Map of Cornwall -->
+      <img src="cornwall-map.png" alt="Map of Cornwall" style="width: 100px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
 
-    <button type="submit">Send Message</button>
-  </form>
-
-  <div class="contact-extra-info">
-  <div class="map-and-hours">
-    <div class="map-container">
-      <img src="map.gif" alt="Map of Cornwall" class="cornwall-map">
-    </div>
-    <div class="opening-hours">
-      <h3>Opening Hours</h3>
-      <p>Monday – Friday: 9:00am – 5:00pm<br></p>
-    </div>
-  
- <p>
-  For direct enquiries, hover over the phone icon:
-  <span class="phone-tooltip-container">
-    <span class="phone-icon" tabindex="0" aria-label="Contact details">&#128222;</span>
-    <span class="phone-tooltip-tab">
-<strong>Michelle (Director):</strong><br>
+      <!-- Phone icon + tooltip -->
+      <div class="phone-tooltip-container">
+        <div class="phone-icon" tabindex="0" title="Contact Information">&#x260E;</div>
+        <div class="phone-tooltip-tab">
+          <strong>Michelle (Director):</strong><br>
 📞 07932243358<br>
 ✉️ meadowpathwayscornwall@outlook.com
 
 <strong>Zoe (Director):</strong><br>
 📞 07775733587<br>
 ✉️ meadowpathwayscornwall@outlook.com
-    </span>
-  </span>
-</p>
-
-      Mon–Fri, Term Time Only
+          <strong>Location:</strong> Cornwall, UK
+        </div>
+      </div>
     </div>
-</div>
 
+    <div class="contact-form">
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" oninput="this.style.height = '';this.style.height = this.scrollHeight + 'px'"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+      <strong>Opening Hours:</strong> Monday–Friday, 9:00 AM – 3:30 PM (UK School Term Time)
+    </p>
+  </div>
 
   <footer>
-    Meadow Pathways Well Being and Education Cornwall Ltd @ 2025
+    &copy; 2025 Meadow Pathways Cornwall
   </footer>
-
 </body>
 </html>
