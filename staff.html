@@ -2,99 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Staff Only - Meadow Pathways Cornwall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body.staff-bg {
-      background-image: url('Staff.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background: rgba(88, 129, 87, 0.85);
-      border-radius: 15px;
-      color: #fff;
-      box-shadow: 0 2px 12px rgba(40, 60, 60, 0.10);
-    }
-    .staff-tabs-container {
-      display: flex;
-      gap: 32px;
-      justify-content: center;
-      margin: 40px 0;
-      flex-wrap: wrap;
-    }
-    .staff-tab {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(88,129,87,0.95);
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(40,60,60,0.10);
-      width: 220px;
-      padding: 18px 14px 24px 14px;
-      text-align: center;
-      transition: transform 0.15s, box-shadow 0.15s;
-      color: #fff;
-    }
-    .staff-tab:hover {
-      transform: scale(1.04);
-      box-shadow: 0 6px 22px rgba(30,45,60,0.22);
-    }
-    .staff-tab img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      background: #fff;
-      object-fit: cover;
-    }
-    .staff-tab-title {
-      font-size: 1.15rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .staff-tab-link {
-      color: #fff !important;
-      text-decoration: underline;
-      font-size: 1rem;
-      word-break: break-word;
-      transition: color 0.15s;
-    }
-    .staff-tab-link:hover {
-      color: #a3b18a !important;
-    }
-    ul {
-      color: #fff;
-      margin-top: 30px;
-      list-style: inside disc;
-      font-size: 1.1rem;
-    }
-    @media (max-width: 600px) {
-      .staff-tabs-container {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-      }
-      .staff-tab {
-        width: 90%;
-        max-width: 350px;
-      }
-      section {
-        margin: 20px 15px;
-      }
-    }
-  </style>
-
   <script>
+    // Simple password protection - not secure for sensitive data
     document.addEventListener("DOMContentLoaded", function() {
       var password = prompt("Please enter the staff password:");
-      if(password !== "MPWEC!") {
+      if(password !== "MPWECstaff!") {
         alert("Incorrect password. Access denied.");
         window.location.href = "index.html";
       }
@@ -108,7 +23,46 @@
 
   <ul class="nav-tabs">
     <li><a href="index.html">Home</a></li>
+    <li><a href="eotas.html">EOTAS Info</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="safeguarding.html">Safeguarding</a></li>
     <li><a href="contact.html">Contact Us</a></li>
-    <li><a h
+    <li><a href="staff.html" class="active">Staff Only</a></li>
+  </ul>
+
+  <section>
+    <h1>Staff Only Area</h1>
+    <div class="staff-tabs-container">
+      <div class="staff-tab">
+        <img src="Book.jpg" alt="KCSIE 2025" />
+        <div class="staff-tab-title">KCSIE 2025</div>
+        <a class="staff-tab-link" href="KCSIE 2025.pdf" target="_blank">View / Download PDF</a>
+      </div>
+      <div class="staff-tab">
+        <img src="Book.jpg" alt="RSHE 2025" />
+        <div class="staff-tab-title">RSHE 2025</div>
+        <a class="staff-tab-link" href="RSHE 2025.pdf" target="_blank">View / Download PDF</a>
+      </div>
+    </div>
+
+    <ul>
+      <li><strong>Training Dates:</strong> [Add your next training date here]</li>
+      <li><strong>Safeguarding Updates:</strong> [Add update or link here]</li>
+      <li><strong>Documents:</strong>
+        <ul>
+          <li>
+            <a href="https://www.nspcc.org.uk/keeping-children-safe/" target="_blank">NSPCC: Keeping Children Safe</a>
+          </li>
+          <li>
+            <a href="https://ciossafeguarding.org.uk/scp" target="_blank">Cornwall & Isles of Scilly Safeguarding Children Partnership</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
+  </footer>
+</body>
+</html>
