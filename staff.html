@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <title>Staff Only - Meadow Pathways Cornwall</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Staff Only - Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-    // Simple password protection - not secure for sensitive data
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       var password = prompt("Please enter the staff password:");
-      if(password !== "MPWECstaff!") {
+      if (password !== "MPWECstaff!") {
         alert("Incorrect password. Access denied.");
         window.location.href = "index.html";
       }
     });
   </script>
 </head>
-<body class="staff-bg">
+<body class="staff">
   <div class="logo-container">
     <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo" />
   </div>
@@ -36,25 +35,39 @@
       <div class="staff-tab">
         <img src="Book.jpg" alt="KCSIE 2025" />
         <div class="staff-tab-title">KCSIE 2025</div>
-        <a class="staff-tab-link" href="KCSIE 2025.pdf" target="_blank">View / Download PDF</a>
+        <a
+          class="staff-tab-link"
+          href="KCSIE 2025.pdf"
+          target="_blank"
+          >View / Download PDF</a
+        >
       </div>
       <div class="staff-tab">
         <img src="Book.jpg" alt="RSHE 2025" />
         <div class="staff-tab-title">RSHE 2025</div>
-        <a class="staff-tab-link" href="RSHE 2025.pdf" target="_blank">View / Download PDF</a>
+        <a
+          class="staff-tab-link"
+          href="RSHE 2025.pdf"
+          target="_blank"
+          >View / Download PDF</a
+        >
       </div>
     </div>
 
     <ul>
-      <li><strong>Training Dates:</strong> [Add your next training date here]</li>
+      <li><strong>Training Dates and information:</strong> https://www.pookyknightsmith.com/Dr Pookty Knightsmith- Pratical ideas to enable every child to thrive]</li>
       <li><strong>Safeguarding Updates:</strong> [Add update or link here]</li>
       <li><strong>Documents:</strong>
         <ul>
           <li>
-            <a href="https://www.nspcc.org.uk/keeping-children-safe/" target="_blank">NSPCC: Keeping Children Safe</a>
+            <a href="https://www.nspcc.org.uk/keeping-children-safe/" target="_blank" rel="noopener noreferrer">
+              NSPCC: Keeping Children Safe
+            </a>
           </li>
           <li>
-            <a href="https://ciossafeguarding.org.uk/scp" target="_blank">Cornwall & Isles of Scilly Safeguarding Children Partnership</a>
+            <a href="https://ciossafeguarding.org.uk/scp" target="_blank" rel="noopener noreferrer">
+              Cornwall & Isles of Scilly Safeguarding Children Partnership
+            </a>
           </li>
         </ul>
       </li>
