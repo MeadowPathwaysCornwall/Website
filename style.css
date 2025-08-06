@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Reset and Base Styles */
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
@@ -7,19 +5,28 @@ body, h1, h2, h3, p, ul, li, a {
   box-sizing: border-box;
 }
 
-body {
+body.bg {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-}
-
-/* Backgrounds for pages */
-body.home, body.about, body.eotas {
+  background-color: #f4f4f4;
   background-image: url('BG.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+
+body.about {
+  background-image: url('BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.eotas {
+  background-image: url('BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 body.staff {
@@ -27,7 +34,6 @@ body.staff {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 body.contact {
@@ -35,10 +41,8 @@ body.contact {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
-/* Logo */
 .logo-container {
   text-align: center;
   padding: 10px;
@@ -49,15 +53,13 @@ body.contact {
   height: auto;
 }
 
-/* Navigation */
 .nav-tabs {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #588157; /* soft green */
+  background-color: #333;
   padding: 10px 0;
-  margin-bottom: 20px;
 }
 
 .nav-tabs li {
@@ -74,59 +76,26 @@ body.contact {
 
 .nav-tabs a:hover,
 .nav-tabs a.active {
-  background-color: #a3b18a; /* lighter green */
+  background-color: #555;
 }
 
-/* Main Content Box */
-.main-content-box, section {
+.main-content-box {
   max-width: 1000px;
-  margin: 0 auto 40px auto;
-  padding: 20px 25px;
-  background-color: rgba(255, 255, 255, 0.92);
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(40, 60, 60, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
-  color: #3a4a27;
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 30px;
 }
 
-h2 {
-  font-size: 1.6rem;
-  margin: 20px 0 10px 0;
-  color: #588157;
-}
-
-/* Paragraph and list styles */
-p {
-  margin-bottom: 16px;
-  font-size: 1.1rem;
-}
-
-ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-  font-size: 1.05rem;
-}
-
-/* Links */
-a {
-  color: #588157;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #3a4a27;
-}
-
-/* Banner image for home page */
 .banner-container {
   text-align: center;
   margin-top: 30px;
@@ -141,12 +110,50 @@ a:hover {
   object-fit: cover;
 }
 
-/* Staff photos for About Us */
+/* Staff Page */
+.staff-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.staff-tab {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.book-img {
+  width: 2.5cm;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.staff-tab-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.staff-tab-link {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.staff-tab-link:hover {
+  text-decoration: underline;
+}
+
+/* About Page */
 .staff-photos {
   display: flex;
-  gap: 30px;
   justify-content: center;
-  margin-top: 20px;
+  gap: 30px;
+  margin-top: 30px;
   flex-wrap: wrap;
 }
 
@@ -155,98 +162,51 @@ a:hover {
   height: 2cm;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #a3b18a;
-  box-shadow: 0 2px 8px rgba(88,129,87,0.6);
+  border: 3px solid #ccc;
 }
 
-/* Arrow small */
-.safeguarding-arrow {
-  width: 30px;
-  height: auto;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-/* Safeguarding images */
-.safeguarding-images {
+/* Safeguarding Policy Tabs */
+.policy-tabs-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 15px 0 25px 0;
   flex-wrap: wrap;
-}
-
-.safeguarding-img {
-  max-width: 250px;
-  max-height: 180px;
+  justify-content: center;
+  gap: 15px;
+  background-image: url('IMG_3303.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-  object-fit: cover;
-}
-
-/* Staff Page Styling */
-.staff-tabs-container {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
   margin-top: 30px;
 }
 
-.staff-tab {
-  background-color: rgba(88,129,87,0.95);
-  border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(40,60,60,0.1);
-  padding: 20px 15px;
-  width: 220px;
-  text-align: center;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.staff-tab:hover {
-  box-shadow: 0 6px 22px rgba(30,45,60,0.22);
-  transform: scale(1.04);
-}
-
-.staff-tab img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  background: white;
-  object-fit: contain;
-}
-
-.staff-tab-title {
+.policy-tab {
+  padding: 8px 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
   font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: #fff;
-}
-
-.staff-tab-link {
-  color: #d3e1cd;
-  text-decoration: underline;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-  word-break: break-word;
-}
-
-.staff-tab-link:hover {
-  color: #e7f0d9;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #588157;
-  color: white;
-  margin-top: 30px;
+  transition: background-color 0.3s;
   font-size: 0.9rem;
 }
 
-/* Responsive */
+.policy-tab:hover {
+  background-color: #eee;
+}
+
+/* Safeguarding Images */
+.safeguarding-image {
+  width: 160%;
+  height: auto;
+  max-width: 640px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .nav-tabs {
     flex-direction: column;
@@ -260,11 +220,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .safeguarding-images {
-    flex-direction: column;
-    align-items: center;
-  }
-  .banner {
-    max-height: 200px;
+  .safeguarding-image {
+    width: 100%;
   }
 }
