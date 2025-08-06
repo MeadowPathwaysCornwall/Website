@@ -5,47 +5,30 @@ body, h1, h2, h3, p, ul, li, a {
   box-sizing: border-box;
 }
 
-body.bg {
+body.bg,
+body.about,
+body.eotas {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color:#87A96B ;
+  background-color: #f4f4f4;
   background-image: url('BG.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-body.about {
-  background-image: url('BG.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-body.eotas {
-  background-image: url('BG.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body.safeguarding {
-  background-image: url('Staff.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 body.staff {
   background-image: url('Staff.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 body.contact {
   background-image: url('contact1.png');
-  background-size: contain;
-  background-position: top center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-color: #f4f4f4; /* fallback background */
 }
 
 .logo-container {
@@ -54,7 +37,7 @@ body.contact {
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 150px;
   height: auto;
 }
 
@@ -63,7 +46,7 @@ body.contact {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color:#87A96B;
+  background-color: #333;
   padding: 10px 0;
 }
 
@@ -84,14 +67,13 @@ body.contact {
   background-color: #555;
 }
 
-.main-content-box,
-.contact-form,
-.contact-info,
-.contact-extra-info,
-.policy-tabs-container {
-  background-color: #87A96B !important;
-}
-
+.main-content-box {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -133,17 +115,11 @@ footer {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 .book-img {
- .staff-tab img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  background: #fff;
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 100%;
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .staff-tab-title {
@@ -152,7 +128,7 @@ footer {
 }
 
 .staff-tab-link {
-  color: #87A96B;
+  color: #0066cc;
   text-decoration: none;
 }
 
@@ -170,129 +146,81 @@ footer {
 }
 
 .staff-photo {
-  width: 200px;
-  height: 200px;
+  width: 2cm;
+  height: 2cm;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ccc;
 }
 
 /* Safeguarding Policy Tabs */
-
-/* Policy tabs section (Safeguarding Page) */
 .policy-tabs-container {
-  margin: 30px auto;
-  max-width: 300px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  background: #87A96B !important;
-  padding: 24px;
-  border-radius: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  background-image: url('IMG_3303.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
 }
-.policy-image-tab {
-  position: relative;
-  display: block;
-  width: 100%;
-  max-width: 250px;
-  height: 120px;
-  border-radius: 15px;
-  overflow: hidden;
-  background: url('IMG_3303.jpg') center center/cover no-repeat;
-  box-shadow: 0 4px 18px rgba(34, 64, 102, 0.14);
+
+.policy-tab {
+  padding: 6px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 8px;
   text-decoration: none;
-  margin: 0 auto;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.policy-image-tab:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 24px rgba(30,45,60,0.21);
-}
-.policy-tab-text {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff !important;
+  color: #333;
   font-weight: bold;
-  font-size: 1.18rem;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.45);
-  background: rgba(0,0,0,0.32);
-  padding: 22px 18px;
-  border-radius: 11px;
-  .text-center {
-  text-align: center;
+  transition: background-color 0.3s;
+  font-size: 0.8rem;
 }
-  width: 88%;
-  box-sizing: border-box;
+
+.policy-tab:hover {
+  background-color: #eee;
 }
+
+/* Safeguarding Images */
 .safeguarding-image {
-  width: 100%;
-  max-width: 364px; /* 40% larger than typical 260px */
+  width: 200%;
   height: auto;
+  max-width: 720px;
   margin: 20px auto;
   display: block;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-}
 
-.phone-tooltip-container {
-  position: relative;
-  display: inline-block;
-  margin: 20px auto;
-  text-align: center;
+/* Contact Info Layout */
+.contact-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 40px auto 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .phone-icon {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #a3b18a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.2s, background 0.2s;
-  box-shadow: 0 2px 8px rgba(40,60,60,0.12);
-  font-size: 1.7rem;
-  overflow: hidden;
+  font-size: 2rem;
+  color: red;
 }
 
-.phone-icon:hover,
-.phone-icon:focus {
-  box-shadow: 0 4px 24px rgba(40,60,60,0.18);
-  background: #87A96B;
+.phone-text a {
+  color: #0066cc;
+  text-decoration: none;
 }
 
-.phone-icon img {
-  width: 28px;
-  height: 28px;
-  display: block;
+.phone-text a:hover {
+  text-decoration: underline;
 }
 
-.phone-tooltip-tab {
-  display: none;
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #87A96B;
-  color: #fff;
-  padding: 20px 28px;
-  border-radius: 16px;
-  box-shadow: 0 2px 18px rgba(40,60,60,0.18);
-  min-width: 220px;
-  z-index: 99;
-  text-align: left;
-  font-size: 1.05rem;
-  white-space: pre-line;
-}
-
-.phone-tooltip-container:hover .phone-tooltip-tab,
-.phone-tooltip-container:focus-within .phone-tooltip-tab {
-  display: block;
-}
 /* Contact Form Styling */
 .contact-form {
   background-color: rgba(255, 255, 255, 0.95);
@@ -329,7 +257,7 @@ footer {
 .contact-form button {
   margin-top: 20px;
   padding: 10px 15px;
-  background-color: #87A96B;
+  background-color: #588157;
   color: white;
   border: none;
   border-radius: 6px;
@@ -338,7 +266,7 @@ footer {
 }
 
 .contact-form button:hover {
-  background-color: #16A085;
+  background-color: #3a5a40;
 }
 
 /* Responsive Design */
@@ -358,81 +286,4 @@ footer {
   .safeguarding-image {
     width: 100%;
   }
-}
-/* Logo styling - always centered */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  width: 100%;
-}
-.logo {
-  width: 800px;
-  height: auto;
-  display: block;
-  .contact-extra-info {
-  max-width: 600px;
-  margin: 30px auto 20px;
-  padding: 20px;
-  background-color: rgba(255,255,255,0.95);
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.map-and-hours {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.map-gif {
-  width: 180px; /* Smaller */
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  order: 2; /* Pushes it right on larger screens */
-}
-.map-and-hours {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.opening-hours {
-  font-size: 1rem;
-  color: #333;
-}
-.opening-hours h3 {
-  margin-bottom: 6px;
-  color: #3a5a40;
-}
-.phone-tooltip-container {
-  position: relative;
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.phone-tooltip {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transform: translateY(10px);
-  background-color: #588157;
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  white-space: pre-line;
-  z-index: 10;
-}
-
-.phone-tooltip-container:hover .phone-tooltip {
-  display: block;
 }
