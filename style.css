@@ -138,7 +138,7 @@ footer {
   width: 60px;
   height: auto;
   margin-bottom: 10px;
-}
+
 }
 
 .staff-tab-title {
@@ -357,6 +357,15 @@ footer {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   order: 2; /* Pushes it right on larger screens */
+}
+.map-and-hours {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 
