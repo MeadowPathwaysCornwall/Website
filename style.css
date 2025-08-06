@@ -14,12 +14,6 @@ body.bg {
   background-position: center;
   background-repeat: no-repeat;
 }
-body.html {
-  background-image: url('BG.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 body.about {
   background-image: url('BG.png');
