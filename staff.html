@@ -3,38 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Staff Only - Meadow Pathways Cornwall</title>
+  <title>Staff Only | Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    // Simple password protection - not secure for sensitive data
-    document.addEventListener("DOMContentLoaded", function () {
-      var password = prompt("Please enter the staff password:");
-      if (password !== "MPWECstaff!") {
-        alert("Incorrect password. Access denied.");
-        window.location.href = "index.html";
-      }
-    });
-  </script>
 </head>
 <body class="staff">
-
   <div class="logo-container">
     <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo" />
   </div>
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var textarea = document.querySelector('.contact-form textarea');
-  if (textarea) {
-    // Function to auto-resize the textarea
-    textarea.addEventListener('input', function() {
-      this.style.height = 'auto'; // reset height
-      this.style.height = (this.scrollHeight) + 'px';
-    });
-    // Optionally, trigger resize on load if pre-filled
-    textarea.dispatchEvent(new Event('input'));
-  }
-});
-</script>
 
   <ul class="nav-tabs">
     <li><a href="index.html">Home</a></li>
@@ -45,31 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     <li><a href="staff.html" class="active">Staff Only</a></li>
   </ul>
 
-  <section class="main-content-box">
-    <h1>Staff Only Area</h1>
-    <div class="staff-tabs-container">
-      <div class="staff-tab">
-        <img src="Book.jpg" alt="KCSIE 2025" />
-        <div class="staff-tab-title">KCSIE 2025</div>
-        <a class="staff-tab-link" href="KCSIE 2025.pdf" target="_blank">View / Download PDF</a>
-      </div>
-      <div class="staff-tab">
-        <img src="Book.jpg" alt="RSHE 2025" />
-        <div class="staff-tab-title">RSHE 2025</div>
-        <a class="staff-tab-link" href="RSHE 2025.pdf" target="_blank">View / Download PDF</a>
-      </div>
+  <section class="main-content-box staff-tabs-container">
+    <div class="staff-tab">
+      <img src="Book.jpg" alt="Book" class="book-img" />
+      <div class="staff-tab-title">John Smith</div>
+      <div><a href="mailto:john.smith@example.com" class="staff-tab-link">Email John</a></div>
     </div>
-    <ul>
-      <li><strong>Training Dates and info:</strong> </li> 
-       <li><a href="https://https://www.patreon.com/pookyh target="_blank">Dr Pooky Knightsmith</a></li>
-      <li><strong>Safeguarding Updates:</strong> </li>
-      <li><strong>Documents:</strong>
-        <ul>
-          <li><a href="https://www.nspcc.org.uk/keeping-children-safe/" target="_blank">NSPCC: Keeping Children Safe</a></li>
-          <li><a href="https://ciossafeguarding.org.uk/scp" target="_blank">Cornwall & Isles of Scilly Safeguarding Children Partnership</a></li>
-        </ul>
-      </li>
-    </ul>
+    <div class="staff-tab">
+      <img src="Book.jpg" alt="Book" class="book-img" />
+      <div class="staff-tab-title">Jane Doe</div>
+      <div><a href="mailto:jane.doe@example.com" class="staff-tab-link">Email Jane</a></div>
+    </div>
+    <!-- Add more staff tabs as needed -->
   </section>
 
   <footer>
