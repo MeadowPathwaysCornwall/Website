@@ -1,57 +1,111 @@
-.phone-icon { 
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 50%;
-  background: #a3b18a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(40,60,60,0.12);
-  font-size: 1.7rem;
-  overflow: hidden;
-}
-
-.phone-icon img {
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-<div class="main-content-box">
-  <h1>Contact Us</h1>
-
-  <div class="contact-person">
-    <div class="phone-icon" title="Contact Zoe">
-      <img src="red-phone-icon.png" alt="Phone Icon" />
-    </div>
-    <div class="contact-details" style="display:none;">
-      <strong>Zoe Waitz</strong><br />
-      Phone: 01234 567890<br />
-      Email: zoe@example.com
-    </div>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Meadow Pathways Cornwall</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Phone icon styles (from your provided code) */
+    .phone-tooltip-container {
+      position: relative;
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: middle;
+    }
+    .phone-icon {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 50%;
+      background: #a3b18a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: box-shadow 0.2s, background 0.2s;
+      box-shadow: 0 2px 8px rgba(40,60,60,0.12);
+      font-size: 1.7rem;
+      overflow: hidden;
+    }
+    .phone-icon:hover, .phone-icon:focus {
+      box-shadow: 0 4px 24px rgba(40,60,60,0.18);
+      background: #588157;
+    }
+    .phone-tooltip-tab {
+      display: none;
+      position: absolute;
+      top: 120%; left: 50%;
+      transform: translateX(-50%);
+      background: #588157;
+      color: #fff;
+      padding: 20px 28px;
+      border-radius: 16px;
+      box-shadow: 0 2px 18px rgba(40,60,60,0.18);
+      min-width: 220px;
+      z-index: 99;
+      text-align: left;
+      font-size: 1.05rem;
+      white-space: pre-line;
+    }
+    .phone-tooltip-container:hover .phone-tooltip-tab,
+    .phone-tooltip-container:focus-within .phone-tooltip-tab {
+      display: block;
+    }
+    .phone-tooltip-tab strong {
+      color: #fff;
+    }
+    @media (hover: none) and (pointer: coarse) {
+      .phone-tooltip-tab {
+        top: 140%;
+      }
+    }
+  </style>
+</head>
+<body class="contact">
+  <div class="logo-container">
+    <img src="Logo.png" alt="Meadow Pathways Cornwall Logo" class="logo" />
   </div>
 
-  <div class="contact-person">
-    <div class="phone-icon" title="Contact Michelle">
-      <img src="red-phone-icon.png" alt="Phone Icon" />
-    </div>
-    <div class="contact-details" style="display:none;">
-      <strong>Michelle Pascoe</strong><br />
-      Phone: 09876 543210<br />
-      Email: michelle@example.com
-    </div>
-  </div>
-</div>
+  <ul class="nav-tabs">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="eotas.html">EOTAS Info</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="safeguarding.html">Safeguarding</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+    <li><a href="staff.html">Staff Only</a></li>
+  </ul>
 
-<script>
-  // Simple hover toggle for contact details
-  document.querySelectorAll('.phone-icon').forEach(function(icon) {
-    icon.addEventListener('mouseenter', function() {
-      this.nextElementSibling.style.display = 'block';
-    });
-    icon.addEventListener('mouseleave', function() {
-      this.nextElementSibling.style.display = 'none';
-    });
-  });
-</script>
+  <section class="main-content-box">
+    <h1>Contact Us</h1>
+    <p>
+      We welcome your enquiries. Please reach out to us via email or phone.
+    </p>
+
+    <h2>Zoe Waitz</h2>
+    <div class="phone-tooltip-container" tabindex="0" aria-label="Contact details for Zoe Waitz">
+      <div class="phone-icon" role="button" aria-pressed="false" tabindex="0" aria-describedby="zoe-contact">
+        📞
+      </div>
+      <div class="phone-tooltip-tab" id="zoe-contact">
+        <strong>Phone:</strong> 01234 567890<br />
+        <strong>Email:</strong> <a href="mailto:zoe@example.com" style="color:#fff; text-decoration: underline;">zoe@example.com</a>
+      </div>
+    </div>
+
+    <h2>Michelle Pascoe</h2>
+    <div class="phone-tooltip-container" tabindex="0" aria-label="Contact details for Michelle Pascoe">
+      <div class="phone-icon" role="button" aria-pressed="false" tabindex="0" aria-describedby="michelle-contact">
+        📞
+      </div>
+      <div class="phone-tooltip-tab" id="michelle-contact">
+        <strong>Phone:</strong> 09876 543210<br />
+        <strong>Email:</strong> <a href="mailto:michelle@example.com" style="color:#fff; text-decoration: underline;">michelle@example.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
+  </footer>
+</body>
+</html>
