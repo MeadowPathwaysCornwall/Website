@@ -28,7 +28,12 @@ body.eotas {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+body.safeguarding {
+  background-image: url('Staff.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 body.staff {
   background-image: url('Staff.png');
   background-size: cover;
@@ -49,7 +54,7 @@ body.contact {
 }
 
 .logo {
-  max-width: 400px;
+  max-width: 200px;
   height: auto;
 }
 
@@ -129,7 +134,7 @@ footer {
 }
 
 .book-img {
-  width: 80px; /* roughly equivalent to 2.5cm */
+  width: 40px; /* roughly equivalent to 2.5cm */
   height: auto;
   margin-bottom: 10px;
 }
@@ -159,8 +164,8 @@ footer {
 }
 
 .staff-photo {
-  width: 2cm;
-  height: 2cm;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ccc;
@@ -215,7 +220,7 @@ footer {
 }
 /* Safeguarding Images */
 .safeguarding-image {
-  width: 1000%;
+  width: 800%;
   height: auto;
   max-width: 520px;
   margin: 20px auto;
@@ -346,7 +351,7 @@ footer {
 }
 
 .cornwall-map {
-  width: 150px;
+  width: 200px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
