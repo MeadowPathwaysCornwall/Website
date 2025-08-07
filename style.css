@@ -17,11 +17,12 @@ body.eotas {
   background-repeat: no-repeat;
 }
 body.safeguarding {
-  background-image: url('Staff.png');
+  background-image: url('Staff.png'); /* ... */ 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+ 
 body.staff {
   background-image: url('Staff.png');
   background-size: cover;
