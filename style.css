@@ -188,9 +188,11 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Book Image Hidden */
 .book-img {
-  display: none;
+  width: 24px;     /* shrink further if needed */
+  height: auto;
+  margin-bottom: 6px;
+  vertical-align: middle;
 }
 
 /* Contact Info Layout */
