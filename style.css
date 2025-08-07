@@ -160,26 +160,21 @@ footer {
   border-radius: 10px;
   margin-top: 30px;
 }
-
-.policy-tab {
-  padding: 6px 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  font-size: 0.8rem;
+.policy-tab img {
+  width: 100%;        /* Ensures the image fills the tab width */
+  height: auto;       /* Maintains aspect ratio */
+  max-height: 120px;  /* Prevents image from being too tall */
+  object-fit: cover;  /* Ensures the image fits nicely */
+  border-radius: 6px;
+  margin-bottom: 8px;
 }
-
 .policy-tab:hover {
   background-color: #eee;
 }
 
 /* Safeguarding Images */
 .safeguarding-image {
-  width: 140%;
+  width: 100%;
   height: auto;
   max-width: 720px;
   margin: 20px auto;
