@@ -188,7 +188,7 @@ footer {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hide Book Image */
+/* Book Image Hidden */
 .book-img {
   display: none;
 }
@@ -204,7 +204,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .phone-tooltip-container {
