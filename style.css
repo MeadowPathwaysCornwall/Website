@@ -152,7 +152,26 @@ footer {
   border: 3px solid #ccc;
 }
 
-/* Safeguarding Policy Tabs */
+/* Safeguarding page background */
+body.safeguarding {
+  background-image: url('Staff.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Safeguarding images */
+.safeguarding-image {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Policy Tabs Container */
 .policy-tabs-container {
   display: flex;
   flex-wrap: wrap;
@@ -164,28 +183,42 @@ footer {
   padding: 30px;
   border-radius: 10px;
   margin-top: 30px;
+  /* Optional: add semi-transparent white overlay for readability */
+  background-color: rgba(255, 255, 255, 0.85);
+  background-blend-mode: lighten;
 }
+
+/* Individual policy tab */
+.policy-tab {
+  max-width: 180px;
+  width: 180px;
+  padding: 6px 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Policy tab image */
 .policy-tab img {
-  width: 100%;        /* Ensures the image fills the tab width */
-  height: auto;       /* Maintains aspect ratio */
-  max-height: 120px;  /* Prevents image from being too tall */
-  object-fit: cover;  /* Ensures the image fits nicely */
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: cover;
   border-radius: 6px;
   margin-bottom: 8px;
 }
+
+/* Hover effect for policy tabs */
 .policy-tab:hover {
   background-color: #eee;
-}
-
-/* Safeguarding Images */
-.safeguarding-image {
-  width: 100%;
-  height: auto;
-  max-width: 720px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Book Image Hover Behavior */
