@@ -189,6 +189,19 @@ footer {
 }
 .book-img {
   display: none;
+  .book-img {
+  display: none;
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.staff-tab:hover .book-img {
+  display: block;
+  opacity: 1;
+}
+
 }
 /* Contact Info Layout */
 .contact-info {
