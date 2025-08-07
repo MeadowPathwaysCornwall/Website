@@ -187,9 +187,9 @@ footer {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Book Image Hover Behavior */
 .book-img {
-  display: none;
-  .book-img {
   display: none;
   width: 40px;
   height: auto;
@@ -197,12 +197,12 @@ footer {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .staff-tab:hover .book-img {
   display: block;
   opacity: 1;
 }
 
-}
 /* Contact Info Layout */
 .contact-info {
   background-color: rgba(255, 255, 255, 0.9);
@@ -214,8 +214,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .phone-tooltip-container {
