@@ -1,13 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css" />
- 
-  <body class="bg">
-
+  <style>
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      outline: inherit;
+      height: 100%;
+      width: 100%;
+      text-align: left;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Popup/modal section styles */
+    .popup-section {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .popup-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      position: relative;
+      text-align: center;
+    }
+    .popup-content img {
+      max-width: 100%;
+      height: auto;
+    }
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      cursor: pointer;
+    }
+    .close-btn:hover,
+    .close-btn:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body class="home">
   <div class="logo-container">
@@ -15,7 +95,13 @@
   </div>
 
   <ul class="nav-tabs">
-    <li><a href="index.html" class="active">Home</a></li>
+    <li class="dropdown">
+      <a href="index.html" class="active dropbtn">Home</a>
+      <div class="dropdown-content">
+        <a href="#" onclick="showPopup('values-popup');return false;">Our Values</a>
+        <a href="#" onclick="showPopup('aims-popup');return false;">Our Aims</a>
+      </div>
+    </li>
     <li><a href="eotas.html">EOTAS Info</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="safeguarding.html">Safeguarding</a></li>
@@ -23,10 +109,28 @@
     <li><a href="staff.html">Staff Only</a></li>
   </ul>
 
+  <!-- Popup Sections -->
+  <div id="values-popup" class="popup-section">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('values-popup')">&times;</span>
+      <h2>Our Values</h2>
+      <img src="values.png" alt="Our Values" />
+    </div>
+  </div>
+  <div id="aims-popup" class="popup-section">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('aims-popup')">&times;</span>
+      <h2>Our Aims</h2>
+      <p>
+        <!-- Replace this text with your actual aims content -->
+        Our aims are to foster resilience, independence, well-being, honesty, integrity, friendship, and kindness in every individual we support.
+      </p>
+    </div>
+  </div>
+
   <section class="main-content-box">
     <h1>Welcome to Meadow Pathways Cornwall</h1>
     <p>
-      
       <strong>Meadow Pathways Cornwall</strong> is dedicated to supporting children and young people through a holistic, trauma-informed approach to education and well-being. Based in the heart of Cornwall, we specialise in providing nurturing, individualised support for those who may not thrive in mainstream school environments, including learners with neurodivergent profiles, trauma experiences, EBSNA (Emotionally Based School Non-Attendance), bereavement, and those with Education Health and Care Plans (EHCPs).
     </p>
 
@@ -41,13 +145,9 @@
     <h2>Our Values</h2>
     <ul>
       <li><strong>Child-Centered:</strong> Every learner’s journey is unique. We place children and young people at the heart of everything we do.</li>
-      
       <li><strong>Trauma-Informed:</strong> Our staff are trained in trauma-sensitive approaches, ensuring safety and trust for all.</li>
-      
       <li><strong>Collaboration:</strong> We work in partnership with families, professionals, and the wider community.</li>
-      
       <li><strong>Inclusion:</strong> We celebrate diversity and champion the rights of all learners to be heard and respected.</li>
-      
       <li><strong>Well-being:</strong> Emotional, social, and mental well-being are central to our practice.</li>
     </ul>
 
@@ -72,5 +172,30 @@
   <footer>
     © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
   </footer>
+
+  <script>
+    // Popup logic
+    function showPopup(id) {
+      // Hide both popups first
+      document.getElementById('values-popup').style.display = 'none';
+      document.getElementById('aims-popup').style.display = 'none';
+      // Show the selected popup
+      document.getElementById(id).style.display = 'block';
+    }
+    function closePopup(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    // Optional: Close popup when clicking outside
+    window.onclick = function(event) {
+      var valuesPopup = document.getElementById('values-popup');
+      var aimsPopup = document.getElementById('aims-popup');
+      if (event.target == valuesPopup) {
+        valuesPopup.style.display = "none";
+      }
+      if (event.target == aimsPopup) {
+        aimsPopup.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
