@@ -26,7 +26,7 @@
     <li><a href="staff.html">Staff Only</a></li>
   </ul>
 
-  <!-- CAROUSEL START -->
+  <!-- Carousel Start -->
   <div class="carousel-container" id="carousel">
     <div class="carousel-slide" id="carouselSlide">
       <img src="cook.jpg" alt="Cook" class="carousel-image" />
@@ -36,7 +36,7 @@
     </div>
     <div class="carousel-dots" id="carouselDots"></div>
   </div>
-  <!-- CAROUSEL END -->
+  <!-- Carousel End -->
 
   <!-- Popup Sections -->
   <div id="values-popup" class="popup-section">
@@ -50,9 +50,6 @@
     <div class="popup-content">
       <span class="close-btn" onclick="closePopup('ebsna-popup')">&times;</span>
       <h2>EBSNA (Emotionally Based School Non-Attendance)</h2>
-      <p>
-        EBSNA is a term used to describe children and young people who are unable to attend school due to emotional factors. It is important to identify and support students experiencing EBSNA with sensitivity and care.
-      </p>
       <iframe src="EBSNA.pdf" class="doc-preview-iframe" title="EBSNA Document"></iframe>
       <br>
       <a href="EBSNA.pdf" target="_blank" class="download-btn">Download as PDF</a>
@@ -130,10 +127,10 @@
     }
     function resetInterval() {
       clearInterval(interval);
-      interval = setInterval(nextSlide, 3000);
+      interval = setInterval(nextSlide, 3500);
     }
     updateCarousel();
-    interval = setInterval(nextSlide, 3000);
+    interval = setInterval(nextSlide, 3500);
     carousel.addEventListener('mouseenter', () => clearInterval(interval));
     carousel.addEventListener('mouseleave', resetInterval);
 
