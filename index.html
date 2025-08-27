@@ -104,34 +104,58 @@
     © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
   </footer>
 
-  <script>
-    // Carousel JavaScript
-    const slide = document.getElementById('carouselSlide');
-    const dotsContainer = document.getElementById('carouselDots');
-    const carousel = document.getElementById('carousel');
-    const slides = Array.from(slide.children);
-    let current = 0;
-    let interval;
-    slides.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.className = 'carousel-dot';
-      dot.onclick = () => { goToSlide(idx); };
-      dotsContainer.appendChild(dot);
-    });
-    function updateCarousel() {
-      slide.style.transform = `translateX(-${current * 100}%)`;
-      Array.from(dotsContainer.children).forEach((dot, idx) =>
-        dot.classList.toggle('active', idx === current)
-      );
-    }
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      updateCarousel();
-    }
-    function goToSlide(idx) {
-      current = idx;
-      updateCarousel();
-      resetInterval();
+ <script>
+  // Carousel JavaScript
+  const slide = document.getElementById('carouselSlide');
+  const dotsContainer = document.getElementById('carouselDots');
+  const carousel = document.getElementById('carousel');
+  const slides = Array.from(slide.children);
+  let current = 0;
+  let interval;
+
+  // Create navigation dots
+  slides.forEach((_, idx) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.onclick = () => { goToSlide(idx); };
+    dotsContainer.appendChild(dot);
+  });
+
+  // Update carousel position and active dot
+  function updateCarousel() {
+    slide.style.transform = `translateX(-${current * 100}%)`;
+    Array.from(dotsContainer.children).forEach((dot, idx) =>
+      dot.classList.toggle('active', idx === current)
+    );
+  }
+
+  // Move to next slide
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    updateCarousel();
+  }
+
+  // Go to specific slide
+  function goToSlide(idx) {
+    current = idx;
+    updateCarousel();
+    resetInterval();
+  }
+
+  // Reset auto-slide interval
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 6000); // Slower speed: 6 seconds
+  }
+
+  // Initialize carousel
+  updateCarousel();
+  interval = setInterval(nextSlide, 6000);
+
+  // Pause on hover
+  carousel.addEventListener('mouseenter', () => clearInterval(interval));
+  carousel.addEventListener('mouseleave', resetInterval);
+</script>
     }
     function resetInterval() {
       clearInterval(interval);
