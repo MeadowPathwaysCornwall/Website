@@ -147,7 +147,7 @@ footer {
 .carousel-slide {
   display: flex;
   transition: transform 0.5s ease;
-  width: calc(340px * 12); /* Adjust 12 to match your image count */
+  width: calc(340px * 12); /* 12 images total */
 }
 .carousel-image {
   width: 340px;
