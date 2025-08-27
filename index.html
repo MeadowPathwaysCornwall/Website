@@ -30,17 +30,17 @@
   <div class="carousel-container" id="carousel">
     <div class="carousel-slide" id="carouselSlide">
       <img src="cook.jpg" alt="Cook" class="carousel-image" />
-      <img src="arrow.png" alt="arrow" class="carousel-image" />
+      <img src="arrow.png" alt="Arrow" class="carousel-image" />
       <img src="den.jpg" alt="Den" class="carousel-image" />
-      <img src="arrow.png" alt="arrow" class="carousel-image" />
+      <img src="arrow.png" alt="Arrow" class="carousel-image" />
       <img src="map.gif" alt="Map" class="carousel-image" />
       <img src="IT.png" alt="IT" class="carousel-image" />
-      <img src="arrow.png" alt="arrow" class="carousel-image" />
-      <img src="wood.jpg" alt="wood" class="carousel-image" />
+      <img src="arrow.png" alt="Arrow" class="carousel-image" />
+      <img src="wood.jpg" alt="Wood" class="carousel-image" />
       <img src="PE.png" alt="PE" class="carousel-image" />
-      <img src="arrow.png" alt="arrow" class="carousel-image" />
+      <img src="arrow.png" alt="Arrow" class="carousel-image" />
       <img src="PT.jpg" alt="PT" class="carousel-image" />
-      <img src="arrow.png" alt="arrow" class="carousel-image" />
+      <img src="arrow.png" alt="Arrow" class="carousel-image" />
     </div>
     <div class="carousel-dots" id="carouselDots"></div>
   </div>
@@ -59,7 +59,7 @@
       <span class="close-btn" onclick="closePopup('ebsna-popup')">&times;</span>
       <h2>EBSNA (Emotionally Based School Non-Attendance)</h2>
       <iframe src="EBSNA.pdf" class="doc-preview-iframe" title="EBSNA Document"></iframe>
-      <br>
+      <br />
       <a href="EBSNA.pdf" target="_blank" class="download-btn">Download as PDF</a>
       <a href="EBSNA.docx" target="_blank" class="download-btn">Download as Word (.docx)</a>
     </div>
@@ -76,6 +76,7 @@
     <p>
       We offer a range of bespoke packages, including <strong>Education Otherwise Than At School (EOTAS)</strong> provisions, on-site therapeutic education, and outreach into the community. Our flexible, creative programmes are designed to ignite curiosity, build confidence, and enable every learner to develop their strengths and interests.
     </p>
+
     <h2>Our Values</h2>
     <ul>
       <li><strong>Child-Centered:</strong> Every learner’s journey is unique. We place children and young people at the heart of everything we do.</li>
@@ -84,6 +85,7 @@
       <li><strong>Inclusion:</strong> We celebrate diversity and champion the rights of all learners to be heard and respected.</li>
       <li><strong>Well-being:</strong> Emotional, social, and mental well-being are central to our practice.</li>
     </ul>
+
     <h2>What We Offer</h2>
     <ul>
       <li>Bespoke EOTAS packages for children and young people unable to access mainstream education</li>
@@ -92,78 +94,83 @@
       <li>Support for families and carers</li>
       <li>Multi-agency working with local authorities, schools, and specialist services</li>
     </ul>
+
     <p>
       If you would like to learn more about how Meadow Pathways Cornwall can help your child or your family, please explore our site or <a href="contact.html">get in touch</a> for a confidential conversation.
     </p>
+
     <div class="banner-container">
       <img src="banner.png" alt="Meadow Pathways Banner" class="banner" />
     </div>
   </section>
-<script>
-  const slide = document.getElementById('carouselSlide');
-  const dotsContainer = document.getElementById('carouselDots');
-  const carousel = document.getElementById('carousel');
-  const slides = Array.from(slide.children);
-  let current = 0;
-  let interval;
 
-  // create dots
-  slides.forEach((_, idx) => {
-    const dot = document.createElement('button');
-    dot.className = 'carousel-dot';
-    dot.onclick = () => goToSlide(idx);
-    dotsContainer.appendChild(dot);
-  });
-
-  function updateCarousel() {
-    // slide by 340px per image
-    slide.style.transform = `translateX(-${current * 340}px)`;
-    // highlight active dot
-    dotsContainer.childNodes.forEach((dot, idx) =>
-      dot.classList.toggle('active', idx === current)
-    );
-  }
-
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    updateCarousel();
-  }
-
-  function goToSlide(idx) {
-    current = idx;
-    updateCarousel();
-    resetInterval();
-  }
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 6000); // 6s per slide
-  }
-
-  // init
-  updateCarousel();
-  interval = setInterval(nextSlide, 6000);
-
-  // pause on hover
-  carousel.addEventListener('mouseenter', () => clearInterval(interval));
-  carousel.addEventListener('mouseleave', resetInterval);
-
-  // pop-up logic (no change)
-  function showPopup(id) {
-    document.getElementById('values-popup').style.display = 'none';
-    document.getElementById('ebsna-popup').style.display = 'none';
-    document.getElementById(id).style.display = 'block';
-  }
-  function closePopup(id) {
-    document.getElementById(id).style.display = 'none';
-  }
-  window.onclick = e => {
-    ['values-popup','ebsna-popup'].forEach(id => {
-      const pop = document.getElementById(id);
-      if (e.target === pop) pop.style.display = 'none';
-    });
-  };
-</script>
- <footer>
+  <footer>
     © 2025 Meadow Pathways Well-Being and Education Cornwall Ltd. All rights reserved.
   </footer>
+
+  <script>
+    const slide = document.getElementById('carouselSlide');
+    const dotsContainer = document.getElementById('carouselDots');
+    const carousel = document.getElementById('carousel');
+    const slides = Array.from(slide.children);
+    let current = 0;
+    let interval;
+
+    // Create dots
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+      dot.onclick = () => goToSlide(idx);
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateCarousel() {
+      slide.style.transform = `translateX(-${current * 340}px)`;
+      Array.from(dotsContainer.children).forEach((dot, idx) =>
+        dot.classList.toggle('active', idx === current)
+      );
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function goToSlide(idx) {
+      current = idx;
+      updateCarousel();
+      resetInterval();
+    }
+
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 6000);
+    }
+
+    updateCarousel();
+    interval = setInterval(nextSlide, 6000);
+
+    carousel.addEventListener('mouseenter', () => clearInterval(interval));
+    carousel.addEventListener('mouseleave', resetInterval);
+
+    // Popup logic
+    function showPopup(id) {
+      document.getElementById('values-popup').style.display = 'none';
+      document.getElementById('ebsna-popup').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closePopup(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.onclick = e => {
+      ['values-popup','ebsna-popup'].forEach(id => {
+        const pop = document.getElementById(id);
+        if (e.target === pop) pop.style.display = 'none';
+      });
+    };
+  </script>
+</body>
+</html>
