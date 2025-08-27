@@ -6,7 +6,7 @@
   <title>Home | Meadow Pathways Cornwall</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Dropdown styles */
+    /* NAVIGATION & DROPDOWN */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -44,15 +44,69 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-    /* Popup/modal section styles */
+
+    /* CAROUSEL STYLES */
+    .carousel-container {
+      width: 320px;
+      max-width: 96vw;
+      margin: 18px auto 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 3px 16px rgba(0,0,0,0.13);
+      background: #fff;
+    }
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+    .carousel-image {
+      width: 320px;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      background: #eee;
+      border-radius: 12px;
+    }
+    .carousel-dots {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 2;
+    }
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      background: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background 0.2s;
+    }
+    .carousel-dot.active {
+      background: #588157;
+    }
+    @media (max-width: 400px) {
+      .carousel-image, .carousel-container {
+        width: 98vw;
+        height: 110px;
+      }
+    }
+
+    /* POPUP/MODAL STYLES */
     .popup-section {
       display: none;
       position: fixed;
       z-index: 10;
       left: 0;
       top: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       overflow: auto;
       background-color: rgba(0,0,0,0.5);
     }
@@ -66,10 +120,12 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.2);
       position: relative;
       text-align: center;
+      border-radius: 14px;
     }
     .popup-content img {
       max-width: 100%;
       height: auto;
+      margin-bottom: 15px;
     }
     .close-btn {
       color: #aaa;
@@ -86,6 +142,27 @@
       color: black;
       text-decoration: none;
       cursor: pointer;
+    }
+    .doc-preview-iframe {
+      width: 100%;
+      min-height: 350px;
+      margin: 12px 0 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .download-btn {
+      display: inline-block;
+      margin: 10px 5px 0 5px;
+      padding: 7px 16px;
+      background: #588157;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .download-btn:hover {
+      background: #3a5a40;
     }
   </style>
 </head>
@@ -109,24 +186,18 @@
     <li><a href="staff.html">Staff Only</a></li>
   </ul>
 
-  <!-- PHOTO REEL START -->
-  <div class="photo-reel">
-    <div class="photo-swap">
-      <img src="cook.jpg" alt="Cook" class="default-img" />
-      <img src="den.jpg" alt="Den" class="hover-img" />
+  <!-- CAROUSEL START -->
+  <div class="carousel-container" id="carousel">
+    <div class="carousel-slide" id="carouselSlide">
+      <img src="cook.jpg" alt="Cook" class="carousel-image" />
+      <img src="den.jpg" alt="Den" class="carousel-image" />
+      <img src="map.gif" alt="Map" class="carousel-image" />
+      <img src="PT.jpg" alt="PT" class="carousel-image" />
+      <img src="doc-preview.png" alt="EBSNA Document" class="carousel-image" />
     </div>
-    <div class="photo-swap">
-      <img src="map.gif" alt="Map" class="default-img" />
-      <img src="PT.jpg" alt="PT" class="hover-img" />
-    </div>
-    <div class="photo-swap">
-      <a href="EBSNA.docx" target="_blank" tabindex="-1">
-        <img src="doc-placeholder.png" alt="EBSNA Document" class="default-img" />
-        <img src="doc-placeholder-hover.png" alt="EBSNA Document Hover" class="hover-img" />
-      </a>
-    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
   </div>
-  <!-- PHOTO REEL END -->
+  <!-- CAROUSEL END -->
 
   <!-- Popup Sections -->
   <div id="values-popup" class="popup-section">
@@ -141,9 +212,13 @@
       <span class="close-btn" onclick="closePopup('ebsna-popup')">&times;</span>
       <h2>EBSNA (Emotionally Based School Non-Attendance)</h2>
       <p>
-        EBSNA is a term used to describe children and young people who are unable to attend school due to emotional factors. It is important to identify and support students experiencing EBSNA with sensitivity and care.<br><br>
-        <a href="EBSNA.docx" target="_blank">Download our EBSNA Information Document</a>
+        EBSNA is a term used to describe children and young people who are unable to attend school due to emotional factors. It is important to identify and support students experiencing EBSNA with sensitivity and care.
       </p>
+      <!-- Embedded PDF preview: -->
+      <iframe src="EBSNA.pdf" class="doc-preview-iframe" title="EBSNA Document"></iframe>
+      <br>
+      <a href="EBSNA.pdf" target="_blank" class="download-btn">Download as PDF</a>
+      <a href="EBSNA.docx" target="_blank" class="download-btn">Download as Word (.docx)</a>
     </div>
   </div>
 
@@ -152,15 +227,12 @@
     <p>
       <strong>Meadow Pathways Cornwall</strong> is dedicated to supporting children and young people through a holistic, trauma-informed approach to education and well-being. Based in the heart of Cornwall, we specialise in providing nurturing, individualised support for those who may not thrive in mainstream school environments, including learners with neurodivergent profiles, trauma experiences, EBSNA (Emotionally Based School Non-Attendance), bereavement, and those with Education Health and Care Plans (EHCPs).
     </p>
-
     <p>
       Our team is passionate about creating a safe, inclusive, and supportive environment where every child and young person is empowered to flourish. We work closely with families, local authorities, schools, and a wide range of specialist services to ensure a truly collaborative approach to well-being and education.
     </p>
-
     <p>
       We offer a range of bespoke packages, including <strong>Education Otherwise Than At School (EOTAS)</strong> provisions, on-site therapeutic education, and outreach into the community. Our flexible, creative programmes are designed to ignite curiosity, build confidence, and enable every learner to develop their strengths and interests.
     </p>
-
     <h2>Our Values</h2>
     <ul>
       <li><strong>Child-Centered:</strong> Every learner’s journey is unique. We place children and young people at the heart of everything we do.</li>
@@ -169,7 +241,6 @@
       <li><strong>Inclusion:</strong> We celebrate diversity and champion the rights of all learners to be heard and respected.</li>
       <li><strong>Well-being:</strong> Emotional, social, and mental well-being are central to our practice.</li>
     </ul>
-
     <h2>What We Offer</h2>
     <ul>
       <li>Bespoke EOTAS packages for children and young people unable to access mainstream education</li>
@@ -178,11 +249,9 @@
       <li>Support for families and carers</li>
       <li>Multi-agency working with local authorities, schools, and specialist services</li>
     </ul>
-
     <p>
       If you would like to learn more about how Meadow Pathways Cornwall can help your child or your family, please explore our site or <a href="contact.html">get in touch</a> for a confidential conversation.
     </p>
-  
     <div class="banner-container">
       <img src="banner.png" alt="Meadow Pathways Banner" class="banner" />
     </div>
@@ -193,6 +262,43 @@
   </footer>
 
   <script>
+    // Carousel JavaScript
+    const slide = document.getElementById('carouselSlide');
+    const dotsContainer = document.getElementById('carouselDots');
+    const carousel = document.getElementById('carousel');
+    const slides = Array.from(slide.children);
+    let current = 0;
+    let interval;
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.onclick = () => { goToSlide(idx); };
+      dotsContainer.appendChild(dot);
+    });
+    function updateCarousel() {
+      slide.style.transform = `translateX(-${current * 100}%)`;
+      Array.from(dotsContainer.children).forEach((dot, idx) =>
+        dot.classList.toggle('active', idx === current)
+      );
+    }
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      updateCarousel();
+    }
+    function goToSlide(idx) {
+      current = idx;
+      updateCarousel();
+      resetInterval();
+    }
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 3000);
+    }
+    updateCarousel();
+    interval = setInterval(nextSlide, 3000);
+    carousel.addEventListener('mouseenter', () => clearInterval(interval));
+    carousel.addEventListener('mouseleave', resetInterval);
+
     // Popup logic
     function showPopup(id) {
       document.getElementById('values-popup').style.display = 'none';
@@ -207,6 +313,7 @@
       var ebsnaPopup = document.getElementById('ebsna-popup');
       if (event.target == valuesPopup) {
         valuesPopup.style.display = "none";
+      }
       if (event.target == ebsnaPopup) {
         ebsnaPopup.style.display = "none";
       }
