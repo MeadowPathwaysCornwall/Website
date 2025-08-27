@@ -105,7 +105,7 @@
   </footer>
 
  <script>
-  // Carousel JavaScript
+<script>
   const slide = document.getElementById('carouselSlide');
   const dotsContainer = document.getElementById('carouselDots');
   const carousel = document.getElementById('carousel');
@@ -113,76 +113,60 @@
   let current = 0;
   let interval;
 
-  // Create navigation dots
+  // create dots
   slides.forEach((_, idx) => {
     const dot = document.createElement('button');
     dot.className = 'carousel-dot';
-    dot.onclick = () => { goToSlide(idx); };
+    dot.onclick = () => goToSlide(idx);
     dotsContainer.appendChild(dot);
   });
 
-  // Update carousel position and active dot
   function updateCarousel() {
-  function updateCarousel() {
-  slide.style.transform = `translateX(-${current * 340}px)`; // 340px per image
-  Array.from(dotsContainer.children).forEach((dot, idx) =>
-    dot.classList.toggle('active', idx === current)
-  );
-  // Move to next slide
+    // slide by 340px per image
+    slide.style.transform = `translateX(-${current * 340}px)`;
+    // highlight active dot
+    dotsContainer.childNodes.forEach((dot, idx) =>
+      dot.classList.toggle('active', idx === current)
+    );
+  }
+
   function nextSlide() {
     current = (current + 1) % slides.length;
     updateCarousel();
   }
-  // Go to specific slide
+
   function goToSlide(idx) {
     current = idx;
     updateCarousel();
     resetInterval();
   }
 
-  // Reset auto-slide interval
   function resetInterval() {
     clearInterval(interval);
-  interval = setInterval(nextSlide, 7000); // 6 seconds per slide
+    interval = setInterval(nextSlide, 6000); // 6s per slide
   }
 
-  // Initialize carousel
+  // init
   updateCarousel();
-  interval = setInterval(nextSlide, 7000);
+  interval = setInterval(nextSlide, 6000);
 
-  // Pause on hover
+  // pause on hover
   carousel.addEventListener('mouseenter', () => clearInterval(interval));
   carousel.addEventListener('mouseleave', resetInterval);
-</script>
-    }
-    function resetInterval() {
-      clearInterval(interval);
-      interval = setInterval(nextSlide, 6000);
-    }
-    updateCarousel();
-    interval = setInterval(nextSlide, 6000);
-    carousel.addEventListener('mouseenter', () => clearInterval(interval));
-    carousel.addEventListener('mouseleave', resetInterval);
 
-    // Popup logic
-    function showPopup(id) {
-      document.getElementById('values-popup').style.display = 'none';
-      document.getElementById('ebsna-popup').style.display = 'none';
-      document.getElementById(id).style.display = 'block';
-    }
-    function closePopup(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-    window.onclick = function(event) {
-      var valuesPopup = document.getElementById('values-popup');
-      var ebsnaPopup = document.getElementById('ebsna-popup');
-      if (event.target == valuesPopup) {
-        valuesPopup.style.display = "none";
-      }
-      if (event.target == ebsnaPopup) {
-        ebsnaPopup.style.display = "none";
-      }
-    }
-  </script>
-</body>
-</html>
+  // pop-up logic (no change)
+  function showPopup(id) {
+    document.getElementById('values-popup').style.display = 'none';
+    document.getElementById('ebsna-popup').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+  }
+  function closePopup(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+  window.onclick = e => {
+    ['values-popup','ebsna-popup'].forEach(id => {
+      const pop = document.getElementById(id);
+      if (e.target === pop) pop.style.display = 'none';
+    });
+  };
+</script>
