@@ -99,7 +99,7 @@
       <a href="index.html" class="active dropbtn">Home</a>
       <div class="dropdown-content">
         <a href="#" onclick="showPopup('values-popup');return false;">Our Values</a>
-        <a href="#" onclick="showPopup('aims-popup');return false;">Our Aims</a>
+        <a href="#" onclick="showPopup('ebsna-popup');return false;">EBSNA Info</a>
       </div>
     </li>
     <li><a href="eotas.html">EOTAS Info</a></li>
@@ -136,13 +136,13 @@
       <img src="Values.png" alt="Our Values" />
     </div>
   </div>
-  <div id="aims-popup" class="popup-section">
+  <div id="ebsna-popup" class="popup-section">
     <div class="popup-content">
-      <span class="close-btn" onclick="closePopup('aims-popup')">&times;</span>
-      <h2>Our Aims</h2>
+      <span class="close-btn" onclick="closePopup('ebsna-popup')">&times;</span>
+      <h2>EBSNA (Emotionally Based School Non-Attendance)</h2>
       <p>
-        <!-- Replace this text with your actual aims content -->
-        Our aims are to foster resilience, independence, well-being, honesty, integrity, friendship, and kindness in every individual we support.
+        EBSNA is a term used to describe children and young people who are unable to attend school due to emotional factors. It is important to identify and support students experiencing EBSNA with sensitivity and care.<br><br>
+        <a href="EBSNA.docx" target="_blank">Download our EBSNA Information Document</a>
       </p>
     </div>
   </div>
@@ -195,24 +195,21 @@
   <script>
     // Popup logic
     function showPopup(id) {
-      // Hide both popups first
       document.getElementById('values-popup').style.display = 'none';
-      document.getElementById('aims-popup').style.display = 'none';
-      // Show the selected popup
+      document.getElementById('ebsna-popup').style.display = 'none';
       document.getElementById(id).style.display = 'block';
     }
     function closePopup(id) {
       document.getElementById(id).style.display = 'none';
     }
-    // Optional: Close popup when clicking outside
     window.onclick = function(event) {
       var valuesPopup = document.getElementById('values-popup');
-      var aimsPopup = document.getElementById('aims-popup');
+      var ebsnaPopup = document.getElementById('ebsna-popup');
       if (event.target == valuesPopup) {
         valuesPopup.style.display = "none";
       }
-      if (event.target == aimsPopup) {
-        aimsPopup.style.display = "none";
+      if (event.target == ebsnaPopup) {
+        ebsnaPopup.style.display = "none";
       }
     }
   </script>
