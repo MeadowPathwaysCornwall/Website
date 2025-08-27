@@ -212,6 +212,27 @@ footer {
   height: auto;
   margin-bottom: 15px;
 }
+.doc-preview-iframe {
+  width: 100%;
+  min-height: 350px;
+  margin: 12px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.download-btn {
+  display: inline-block;
+  margin: 10px 5px 0 5px;
+  padding: 7px 16px;
+  background: #588157;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.download-btn:hover {
+  background: #3a5a40;
+}
 .close-btn {
   color: #aaa;
   float: right;
