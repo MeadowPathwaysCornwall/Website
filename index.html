@@ -123,18 +123,16 @@
 
   // Update carousel position and active dot
   function updateCarousel() {
-    slide.style.transform = `translateX(-${current * 100}%)`;
-    Array.from(dotsContainer.children).forEach((dot, idx) =>
-      dot.classList.toggle('active', idx === current)
-    );
-  }
-
+  function updateCarousel() {
+  slide.style.transform = `translateX(-${current * 340}px)`; // 340px per image
+  Array.from(dotsContainer.children).forEach((dot, idx) =>
+    dot.classList.toggle('active', idx === current)
+  );
   // Move to next slide
   function nextSlide() {
     current = (current + 1) % slides.length;
     updateCarousel();
   }
-
   // Go to specific slide
   function goToSlide(idx) {
     current = idx;
@@ -145,12 +143,12 @@
   // Reset auto-slide interval
   function resetInterval() {
     clearInterval(interval);
-    interval = setInterval(nextSlide, 6000); // Slower speed: 6 seconds
+  interval = setInterval(nextSlide, 7000); // 6 seconds per slide
   }
 
   // Initialize carousel
   updateCarousel();
-  interval = setInterval(nextSlide, 6000);
+  interval = setInterval(nextSlide, 7000);
 
   // Pause on hover
   carousel.addEventListener('mouseenter', () => clearInterval(interval));
