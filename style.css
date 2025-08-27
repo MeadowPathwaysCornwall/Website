@@ -1,74 +1,58 @@
-/* Reset and Base Styles */
-body, h1, h2, h3, p, ul, li, a {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ORIGINAL SITE STYLES - DO NOT REMOVE OR ALTER THESE UNLESS YOU WANT TO CHANGE THE ORIGINAL APPEARANCE */
 
-body.bg,
-body.about,
-body.eotas {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  background-image: url('BG.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body.safeguarding {
-  background-image: url('Staff.png'); /* ... */ 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body.staff {
-  background-image: url('Staff.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body.contact {
-  background-image: url('contact1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+/* Example: logo, navigation, backgrounds, etc. - keep your original code here */
 .logo-container {
   text-align: center;
-  padding: 10px;
+  margin: 20px 0 10px 0;
 }
-
 .logo {
-  max-width: 300px;
+  width: 260px;
+  max-width: 90vw;
   height: auto;
+  display: inline-block;
 }
-
-.nav-tabs {
+body.bg {
+  background: #f4f7f6 url('BG.png') center/cover no-repeat;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  margin: 0;
+}
+ul.nav-tabs {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #557c55;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #333;
-  padding: 10px 0;
 }
-
-.nav-tabs li {
-  margin: 0 15px;
+ul.nav-tabs li {
+  margin: 0;
+  position: relative;
 }
-
-.nav-tabs a {
-  color: white;
+ul.nav-tabs a,
+ul.nav-tabs .dropbtn {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
 }
-
-.nav-tabs a:hover,
-.nav-tabs a.active {
-  background-color: #555;
+ul.nav-tabs a.active,
+ul.nav-tabs a:hover,
+ul.nav-tabs .dropbtn:hover {
+  background: #3a5a40;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .logo { width: 160px; }
+  ul.nav-tabs a, ul.nav-tabs .dropbtn { padding: 10px 10vw; }
 }
 
 /* Dropdown styles */
@@ -76,41 +60,70 @@ body.contact {
   position: relative;
   display: inline-block;
 }
-.dropbtn {
-  background: none;
-  border: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  outline: inherit;
-  height: 100%;
-  width: 100%;
-  text-align: left;
-}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  left: 0;
+  background: #fff;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.13);
   z-index: 2;
 }
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color: #333;
+  padding: 12px 18px;
   text-decoration: none;
   display: block;
+  background: #fff;
+  font-size: 1rem;
+  border-bottom: 1px solid #eef0ee;
 }
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background: #e6f4ea;
+  color: #3a5a40;
 }
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Carousel Styles */
+/* Page box and banner (keep your own styles here) */
+.main-content-box {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 28px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+.banner-container {
+  margin-top: 34px;
+  text-align: center;
+}
+.banner {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(60,60,60,0.08);
+  margin-bottom: 8px;
+}
+footer {
+  background: #557c55;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 14px 0;
+  font-size: .98em;
+  letter-spacing: 0.01em;
+  margin-top: 34px;
+  border-radius: 0 0 16px 16px;
+}
+@media (max-width: 700px) {
+  .main-content-box { padding: 14px; }
+}
+@media (max-width: 500px) {
+  .main-content-box { padding: 6px; }
+  .banner { border-radius: 5px; }
+}
+
+/* --------- CAROUSEL/SLIDER STYLES --------- */
 .carousel-container {
   width: 320px;
   max-width: 96vw;
@@ -163,7 +176,7 @@ body.contact {
   }
 }
 
-/* Popup/Modal Styles */
+/* --------- POPUP/MODAL STYLES --------- */
 .popup-section {
   display: none;
   position: fixed;
@@ -230,53 +243,12 @@ body.contact {
   background: #3a5a40;
 }
 
-/* Main content and banner */
-.main-content-box {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* --------- RESPONSIVE FIXES --------- */
+@media (max-width: 700px) {
+  .logo { width: 120px; }
+  .main-content-box { margin: 10px 0; }
+  .carousel-container { margin-top: 10px; }
 }
-
-.banner-container {
-  text-align: center;
-  margin-top: 30px;
-}
-.banner {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(40,60,60,0.15);
-  max-height: 250px;
-  object-fit: cover;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-  margin-top: 30px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-tabs {
-    flex-direction: column;
-    align-items: center;
-  }
-  .main-content-box {
-    margin: 15px 5px;
-    padding: 12px;
-  }
-  .banner-container {
-    margin-top: 18px;
-  }
-  .popup-content {
-    max-width: 98vw;
-    padding: 8px;
-  }
+@media (max-width: 400px) {
+  .popup-content { padding: 7px; border-radius: 7px; }
 }
