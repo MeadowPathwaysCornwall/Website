@@ -152,7 +152,7 @@ footer {
 .carousel-image {
   width: 340px;
   height: 190px;
-  object-fit: cover;
+  object-fit: scale-down;
   display: block;
   background: #eee;
   border-radius: 10px;
