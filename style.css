@@ -155,6 +155,7 @@ footer {
   object-fit: scale-down;
   display: block;
   background: #eee;
+  background-color: #fff;
   border-radius: 10px;
   margin: 0 auto;
   max-width: 100%;
