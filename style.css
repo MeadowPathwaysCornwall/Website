@@ -443,7 +443,7 @@ footer {
   resize: vertical;
   margin-top: 5px;
   font-size: 1rem;
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif ;
 }
 .contact-form textarea {
   min-height: 100px;
